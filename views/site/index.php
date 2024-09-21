@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
 									<h1 class="slider-one_heading">Back To School With DIWARNA!</h1>
 									<div class="slider-one_text">Berkolaborasi Dengan Teknologi, Kami Menghadirkan EFISIENSI Dalam Pelayanan.</div>
 									<div class="slider-one_button">
-										<a href="about.html" class="theme-btn btn-style-one">
+										<a href="#produk-kami" class="theme-btn btn-style-one">
 											<span class="btn-wrap">
 												<span class="text-one">Lihat Produk <i class="flaticon-arrow-2"></i></span>
 												<span class="text-two">Lihat Produk <i class="flaticon-arrow-2"></i></span>
@@ -107,7 +107,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<!-- End Services One -->
 	
 	<!-- Events One -->
-	<section class="events-one">
+	<section class="events-one" id="produk-kami">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title">
@@ -167,7 +167,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				</div>
 				<!-- Button -->
 				<div class="vlog-one_button">
-					<a href="events.html" class="theme-btn btn-style-two">
+					<a href="site/about-diwarna" class="theme-btn btn-style-two">
 						<span class="btn-wrap">
 							<span class="text-one">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
 							<span class="text-two">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
