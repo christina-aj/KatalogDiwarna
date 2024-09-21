@@ -87,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
 							<div class="slider-one_image-column col-lg-6 col-md-8 col-sm-12">
 								<div class="slider-one_image">
 									<!-- <img src="assets/images/main-slider/image-1.jpg" alt="" /> -->
-									<img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna-logo-png.png" alt="" />
+									<img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna-logoo.png" alt="" />
 									<!-- <div class="slider-one_video">
 										<div class="slider-one_video-outer">
 											<a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-video slider-one_play"><span class="flaticon-play"><i class="ripple"></i></span></a>
@@ -702,6 +702,26 @@ $this->params['breadcrumbs'][] = $this->title;
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+    // Select all links with hashes
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+            scrollTop: $target.offset().top
+        }, 1000, function(){
+            window.location.hash = target;
+        });
+    });
+});
+</script>
 
 <?php $this->endBody() ?>
 </body>

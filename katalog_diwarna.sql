@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `foto_produk` (
   PRIMARY KEY (`id_foto_produk`)
 ) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dumping data for table katalog_diwarna.foto_produk: ~8 rows (approximately)
+-- Dumping data for table katalog_diwarna.foto_produk: ~0 rows (approximately)
 INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produk`, `desc_foto_produk`, `url_foto_produk`) VALUES
 	(1, 'KAOS KAKI TEMBOK DUKUH', 'KAOS KAKI', 'SDN TEMBOK DUKUH', '/assets/images/produk/1-SDN-TEMBOK-DUKUH.png'),
 	(2, 'BADGE MADRASAH', 'BADGE BORDIR', 'MADRASAH AT TIBYAN', '/assets/images/produk/2-MADRASAH-AT-TIBYAN.png'),
@@ -49,9 +49,7 @@ CREATE TABLE IF NOT EXISTS `katalog_awal` (
   `url_k_awal` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
   `id_sub_kategori` int NOT NULL,
   `slug` varchar(255) COLLATE armscii8_bin NOT NULL,
-  PRIMARY KEY (`katalog_awal_id`),
-  KEY `id_sub_kategori` (`id_sub_kategori`),
-  CONSTRAINT `fk-katalog_awal-id_sub_kategori` FOREIGN KEY (`id_sub_kategori`) REFERENCES `sub_kategori` (`id_sub_kategori`)
+  PRIMARY KEY (`katalog_awal_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Dumping data for table katalog_diwarna.katalog_awal: ~9 rows (approximately)
@@ -89,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `migration` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dumping data for table katalog_diwarna.migration: ~1 rows (approximately)
+-- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1725906630);
 
@@ -99,9 +97,7 @@ CREATE TABLE IF NOT EXISTS `sub_kategori` (
   `nama_sub_kategori` varchar(255) COLLATE armscii8_bin NOT NULL,
   `id_kategori` int NOT NULL,
   `slug` varchar(255) COLLATE armscii8_bin NOT NULL,
-  PRIMARY KEY (`id_sub_kategori`),
-  KEY `id_kategori` (`id_kategori`),
-  CONSTRAINT `fk-sub_kategori-id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`)
+  PRIMARY KEY (`id_sub_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Dumping data for table katalog_diwarna.sub_kategori: ~19 rows (approximately)
