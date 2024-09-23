@@ -14,36 +14,10 @@ $KatalogDetail = Url::to(['site/event-detail']);
 
 $this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
-
+$this->title = 'Homepage'; 
 ?>
 
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Vroom Biker & Hiker Business HTML-5 Template | Homepage 01</title>
-
-<!-- Stylesheets -->
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/bootstrap.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/style.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/meanmenu.min.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/responsive.css" rel="stylesheet">
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="shortcut icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.svg" type="image/x-icon">
-<link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.svg" type="image/x-icon">
-
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
 
 <?php $this->beginBody() ?>
 <body>
@@ -108,12 +82,34 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	<!-- Events One -->
 	<section class="events-one" id="produk-kami">
+		
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title">
 				<div class="sec-title_title"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> PRODUK KAMI</div>
 				<h2 class="sec-title_heading">Perlengkapan Sekolah <br> Dengan Bahan Berkualitas</h2>
+
+			<div class="vlog-one_button">
+				<a href="site/about-diwarna" class="theme-btn btn-style-two">
+					<span class="btn-wrap">
+						<span class="text-one">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
+						<!-- <span class="text-two">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span> -->
+					</span>
+				</a>
 			</div>
+			</div>
+
+			<!-- Category Buttons -->
+			<!-- <div class="category-buttons">
+				<button class="category-button">Semua</button>
+				<button class="category-button">Pakaian</button>
+				<button class="category-button">Aksesoris</button>
+			</div> -->
+
+			
+
+			
+
 			<div class="three-items_slider swiper-container">
 				<div class="swiper-wrapper">
 
@@ -147,8 +143,10 @@ $this->params['breadcrumbs'][] = $this->title;
 				<div class="three-items_slider-pagination"></div>
 				
 				<!-- If we need navigation buttons -->
+
 				<!-- <div class="three-items_slider-prev fas fa-angle-left fa-fw"></div>
 				<div class="three-items_slider-next fas fa-angle-right fa-fw"></div> -->
+				
 				
 			</div>
 			
@@ -498,28 +496,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			</div>
 		</div>
 		<!-- End Widgets Section -->
-		
-		<!-- Footer Bottom -->
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<div class="row clearfix">
-					<!-- Column -->
-					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<div class="copyright">Copyright &copy; 2024 <a href="#">Vroom</a> All Rights Reserved</div>
-					</div>
-					<!-- Column -->
-					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<ul class="footer-bottom_nav">
-							<li><a href="#">Term & Condition</a></li>
-							<li><a href="#">Policy & Privacy </a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</footer>
-	<!-- End Main Footer -->
 	
 	<!-- Search Popup -->
 	<div class="search-popup">

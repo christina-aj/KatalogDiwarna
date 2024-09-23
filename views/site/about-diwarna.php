@@ -163,6 +163,81 @@
 		</div>
 	</section>
 	<!-- End Testimonial Three -->
+
+	<!-- Testimonial Three -->
+	<section class="testimonial-three">
+		<div class="auto-container">
+			<div class="row clearfix">
+				<!-- Title Column -->
+				<div class="testimonial-three_title-column col-lg-4 col-md-12 col-sm-12">
+					<div class="testimonial-three_title-outer">
+						<!-- Sec Title -->
+						<div class="sec-title">
+							<div class="sec-title_title"><i><img src="assets/images/main-slider/grid.svg" alt="" /></i> Client Feedback</div>
+							<h2 class="sec-title_heading">Empower My Journey with Your Feedback</h2>
+						</div>
+						
+						<!-- If we need navigation buttons -->
+						<div class="testimonial-three_navs">
+							<div class="two-items_slider-button-prev fas fa-angle-left fa-fw"></div>
+							<div class="two-items_slider-button-next fas fa-angle-right fa-fw"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Carousel Column -->
+				<div class="testimonial-three_carousel-column col-lg-8 col-md-12 col-sm-12">
+					<div class="testimonial-three_carousel-outer">
+						<div class="two-items_slider swiper-container">
+							<div class="swiper-wrapper">
+
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<!-- Testimonial Block Two -->
+									<div class="testimonial-block_three">
+										<div class="testimonial-block_three-inner">
+											<div class="testimonial-block_three-author">
+												<div class="testimonial-block_three-image">
+													<img src="assets/images/resource/author-4.png" alt="" />
+												</div>
+												<i class="flaticon-quote"></i>
+											</div>
+											<div class="testimonial-block_three-text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors.</div>
+											<div class="testimonial-block_two-name">
+												<strong>Leslie Alexander</strong>
+												#1 Moto Vlogger
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Slide -->
+								<div class="swiper-slide">
+									<!-- Testimonial Block Two -->
+									<div class="testimonial-block_three">
+										<div class="testimonial-block_three-inner">
+											<div class="testimonial-block_three-author">
+												<div class="testimonial-block_three-image">
+													<img src="assets/images/resource/author-5.png" alt="" />
+												</div>
+												<i class="flaticon-quote"></i>
+											</div>
+											<div class="testimonial-block_three-text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors.</div>
+											<div class="testimonial-block_two-name">
+												<strong>Leslie Alexander</strong>
+												#1 Moto Vlogger
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Testimonial Three -->
 	
 	<!-- Journey One -->
 	<section class="journey-two">
