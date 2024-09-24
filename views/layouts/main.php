@@ -19,7 +19,7 @@ $ContactDiwarnas = Url::to(['site/contact-diwarna']);
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <meta charset="utf-8">
-    <title>Vroom Biker & Hiker Business HTML-5 Template | Homepage 01</title>
+    <title>DIWARNA CATALOGUE</title>
     
     <!-- Stylesheets -->
     <link href="<?= Yii::getAlias('@web') ?>/assets/css/bootstrap.css" rel="stylesheet">
@@ -32,7 +32,8 @@ $ContactDiwarnas = Url::to(['site/contact-diwarna']);
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.svg" type="image/x-icon">
-    <link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.svg" type="image/x-icon">
+    <!-- <link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.svg" type="image/x-icon"> -->
+    <link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/images/diwarna-logoo.png" type="image/png">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

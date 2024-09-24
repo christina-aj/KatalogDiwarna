@@ -48,10 +48,14 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
             'rules' => [
-                'pembelian-detail/get-harga' => 'pembelian-detail/get-harga',
-                'stock/get-stock' => 'stock/get-stock',
-                'pembelian/calculate-total' => 'pembelian/calculate-total',
+                '' => 'site/index', // Ini mengarahkan http://basic.test ke site/index
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+        
+            //     'pembelian-detail/get-harga' => 'pembelian-detail/get-harga',
+            //     'stock/get-stock' => 'stock/get-stock',
+            //     'pembelian/calculate-total' => 'pembelian/calculate-total',
             ],
         ],
 

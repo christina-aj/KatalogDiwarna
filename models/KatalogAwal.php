@@ -46,4 +46,9 @@ class KatalogAwal extends \yii\db\ActiveRecord
             'url_k_awal' => 'Url K Awal',
         ];
     }
+
+    public function getSubKategori()
+    {
+        return $this->hasOne(SubKategori::class, ['id_sub_kategori' => 'id_sub_kategori']);
+    }
 }

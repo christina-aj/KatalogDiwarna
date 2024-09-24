@@ -89,33 +89,31 @@ $this->title = 'Homepage';
 				<div class="sec-title_title"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> PRODUK KAMI</div>
 				<h2 class="sec-title_heading">Perlengkapan Sekolah <br> Dengan Bahan Berkualitas</h2>
 
-			<div class="vlog-one_button">
+			<!-- <div class="vlog-one_button">
 				<a href="site/about-diwarna" class="theme-btn btn-style-two">
 					<span class="btn-wrap">
 						<span class="text-one">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
-						<!-- <span class="text-two">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span> -->
 					</span>
 				</a>
 			</div>
-			</div>
-
-			<!-- Category Buttons -->
-			<!-- <div class="category-buttons">
-				<button class="category-button">Semua</button>
-				<button class="category-button">Pakaian</button>
-				<button class="category-button">Aksesoris</button>
 			</div> -->
 
+			<!-- Kategori Buttons -->
 			
-
-			
+				<div class="category-buttons">
+					<button class="btn btn-category" data-kategori="all">Semua Kategori</button>
+					<?php foreach ($kategori as $kat): ?>
+						<button class="btn btn-category" data-kategori="<?= $kat->slug ?>"><?= $kat->nama_kategori ?></button>
+					<?php endforeach; ?>
+				</div>
+			</div>
 
 			<div class="three-items_slider swiper-container">
 				<div class="swiper-wrapper">
 
 					<!-- Slide -->
 					<?php foreach ($katalog_awal as $kat): ?>
-					<div class="swiper-slide">
+					<div class="swiper-slide" data-kategori="<?= $kat->subKategori->kategori->slug ?>">
 						<!-- Event Block One -->
 						<div class="event-block_one">
 							<div class="event-block_one-inner">
@@ -178,28 +176,28 @@ $this->title = 'Homepage';
 					<div class="swiper-wrapper">
 
 						<!-- Slide -->
+						<?php foreach ($foto_slide as $fs): ?>
 						<div class="swiper-slide">
 							<!-- Vlog Block One -->
 							<div class="vlog-block_one">
 								<div class="vlog-block_one-inner">
 									<div class="vlog-block_one-image">
-										<img src="assets/images/produk/slider1.png" alt="" />
-										<!-- <img src="assets/images/resource/vlog-1.jpg" alt="" /> -->
+										<img src="<?= $fs->url_foto_slide ?>" alt="<?= $fs->alt_foto_slide?>" />
 										<div class="vlog-block_one-content">
 											<ul class="vlog-block_one-meta">
 												<li><a href="#">Kaos Kaki</a></li>
 												<li><a href="#">Badge</a></li>
 											</ul>
 											<!-- <h3 class="vlog-block_one-title"><a href="blog-detail.html">Epic Ride Exploring California <br> on Two Wheels</a></h3> -->
-											<h3 class="vlog-block_one-title"><a href="#">Badge Keperluan Apapun <br> Badge Bordir, Rajut, Sablon</a></h3>
+											<h3 class="vlog-block_one-title"><a href="#"><?= $fs->judul_foto_slide?> <br><?= $fs->desk_foto_slide?></a></h3>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<?php endforeach; ?>
 						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Vlog Block One -->
+						<!-- <div class="swiper-slide">
 							<div class="vlog-block_one">
 								<div class="vlog-block_one-inner">
 									<div class="vlog-block_one-image">
@@ -214,7 +212,7 @@ $this->title = 'Homepage';
 									</div>
 								</div>
 							</div>
-					</div>
+						</div> -->
 					</div>
 				</div>
 				
@@ -698,6 +696,52 @@ $this->title = 'Homepage';
     });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.btn-category');
+    const slides = document.querySelectorAll('.swiper-slide');
+    const swiper = new Swiper('.three-items_slider', {
+        pagination: {
+            el: '.three-items_slider-pagination',
+            clickable: true,
+        },
+        slidesPerView: 3, // Ganti dengan jumlah slide yang ingin ditampilkan
+        spaceBetween: 10,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+		speed: 600, // Waktu dalam milidetik untuk transisi
+    	effect: 'slide',
+    });
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const kategori = button.getAttribute('data-kategori');
+
+			// Hapus kelas aktif dari semua tombol
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Tambahkan kelas aktif ke tombol yang diklik
+            button.classList.add('active');
+
+            slides.forEach(slide => {
+                if (kategori === 'all' || slide.getAttribute('data-kategori') === kategori) {
+                    slide.style.display = 'block'; // Tampilkan slide
+                } else {
+                    slide.style.display = 'none'; // Sembunyikan slide
+                }
+            });
+
+            // Update Swiper setelah mengubah slide
+            swiper.update();
+        });
+    });
+});
+</script>
+
+
+
 
 <?php $this->endBody() ?>
 </body>

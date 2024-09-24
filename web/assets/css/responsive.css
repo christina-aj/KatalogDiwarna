@@ -657,6 +657,20 @@
 		line-height:26px;
 	}
 	
+	.events-one .category-buttons {
+        display: block; /* Ubah ke block untuk mode mobile */
+        text-align: center; /* Center kontainer */
+		
+    }
+
+    .events-one .btn-category {
+        display: block; /* Supaya tiap tombol tampil pada satu baris */
+        margin: 10px auto; /* Margin untuk jarak antar tombol dan center */
+        width: 90%; /* Lebar penuh dengan jarak dari tepi */
+        max-width: 300px; /* Batas lebar maksimal */
+		font-size: 10px;
+    }
+
 	.shop-one .four-items_slider-prev,
 	.events-one .three-items_slider-prev{
 		position:relative;

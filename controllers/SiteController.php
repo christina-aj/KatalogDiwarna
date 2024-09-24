@@ -11,6 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\KatalogAwal;
 use app\models\FotoProduk;
+use app\models\Kategori;
+use app\models\FotoSlide;
 
 class SiteController extends Controller
 {
@@ -137,11 +139,19 @@ class SiteController extends Controller
     public function actionIndex()
     {
         // Mengambil semua data dari tabel katalog_awal
-        $katalog_awal = KatalogAwal::find()->all();
+        // $katalog_awal = KatalogAwal::find()->all();
+        $katalog_awal = KatalogAwal::find()
+            ->joinWith('subKategori.kategori')
+            ->where(['kategori.status' => 1])
+            ->all();
+        $kategori = Kategori::find()->where(['status' => 1])->all();
+        $foto_slide = FotoSlide::find()->all();
 
         // Mengirim data ke view
         return $this->render('index', [
             'katalog_awal' => $katalog_awal,
+            'kategori' => $kategori,
+            'foto_slide' => $foto_slide,
         ]);
     }
 
