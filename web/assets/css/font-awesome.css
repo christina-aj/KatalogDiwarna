@@ -6727,6 +6727,12 @@ readers do not read off random characters that represent icons */
 .fa-sellcast:before {
   content: "\f2da"; }
 
+.fa-square-envelope:before {
+  content: "\f0e0"; }
+  
+.fa-envelope-square:before {
+  content: "\f0e0"; }
+
 .fa-square-twitter:before {
   content: "\f081"; }
 
@@ -7716,6 +7722,10 @@ readers do not read off random characters that represent icons */
 
 .fa-twitter:before {
   content: "\f099"; }
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
 
 .fa-rockrms:before {
   content: "\f3e9"; }

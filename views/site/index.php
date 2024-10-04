@@ -100,12 +100,12 @@ $this->title = 'Homepage';
 
 			<!-- Kategori Buttons -->
 			
-				<div class="category-buttons">
+				<!-- <div class="category-buttons">
 					<button class="btn btn-category" data-kategori="all">Semua Kategori</button>
 					<?php foreach ($kategori as $kat): ?>
 						<button class="btn btn-category" data-kategori="<?= $kat->slug ?>"><?= $kat->nama_kategori ?></button>
 					<?php endforeach; ?>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="three-items_slider swiper-container">
@@ -134,7 +134,6 @@ $this->title = 'Homepage';
 						</div>
 					</div>
 					<?php endforeach; ?>
-					
 				</div>
 				
 				<!-- If we need pagination -->
@@ -163,7 +162,7 @@ $this->title = 'Homepage';
 				</div>
 				<!-- Button -->
 				<div class="vlog-one_button">
-					<a href="site/about-diwarna" class="theme-btn btn-style-two">
+					<a href="site/about-diwarna#galeri" class="theme-btn btn-style-two">
 						<span class="btn-wrap">
 							<span class="text-one">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
 							<span class="text-two">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
@@ -229,7 +228,7 @@ $this->title = 'Homepage';
 	<!-- End vlog One -->
 	
 	<!-- Faq One -->
-	<section class="faq-one">
+	<section class="faq-one" id="faq">
 		<div class="faq-one_pattern" style="background-image:url(assets/images/background/pattern-2.png)"></div>
 		<div class="auto-container">
 			<div class="inner-container">
@@ -238,49 +237,9 @@ $this->title = 'Homepage';
 					<!-- Image Column -->
 					<div class="faq-one_form-column col-lg-6 col-md-12 col-sm-12">
 						<div class="faq-one_form-outer">
-							<h3 class="faq-one_form-title">Get in Touch...</h3>
-							<div class="default-form">
-								<form method="post" action="contact.html">
-									
-									<!--Form Group-->
-									<div class="form-group">
-										<input type="text" name="name" value="" placeholder="Name*" required>
-									</div>
-									
-									<!--Form Group-->
-									<div class="form-group">
-										<input type="email" name="email" value="" placeholder="Email*" required>
-									</div>
-									
-									<div class="form-group">
-										<input type="text" name="phone" value="" placeholder="Phone*" required>
-									</div>
-									
-									<!--Form Group-->
-									<div class="form-group">
-										<select name="country" class="custom-select-box">
-											<option>Subject</option>
-											<option>Subject 01</option>
-											<option>Subject 02</option>
-											<option>Subject 03</option>
-										</select>
-									</div>
-									
-									<div class="form-group">
-										<textarea class="" name="message" placeholder="Message"></textarea>
-									</div>
-									
-									<div class="form-group">
-										<button type="button" class="template-btn btn-style-three">
-											<span class="btn-wrap">
-												<span class="text-one">submit now <i class="flaticon-next"></i></span>
-												<span class="text-two">submit now <i class="flaticon-next"></i></span>
-											</span>
-										</button>
-									</div>
-									
-								</form>
-							</div>
+						<div class="image-container">
+							<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/about-diwarna.png" alt="Contact Image" style="width: 100%; height: auto; display: block;">
+						</div>
 						</div>
 					</div>
 					
@@ -289,8 +248,8 @@ $this->title = 'Homepage';
 						<div class="faq-one_accordion-outer">
 							<!-- Sec Title -->
 							<div class="sec-title title-anim">
-								<div class="sec-title_title"><i><img src="assets/images/main-slider/grid.svg" alt="" /></i> Got Questions?</div>
-								<h2 class="sec-title_heading">Frequently Asked Questions About Moto Vlogging.</h2>
+								<div class="sec-title_title"><i><img src="assets/images/main-slider/grid.svg" alt="" /></i> Punya Pertanyaan?</div>
+								<h2 class="sec-title_heading">Frequently Asked Questions Tentang Diwarna.</h2>
 							</div>
 							
 							<!-- Accordion Box -->
@@ -298,43 +257,43 @@ $this->title = 'Homepage';
 										
 								<!-- Block -->
 								<li class="accordion block active-block">
-									<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>How do you stay safe while moto vlogging?</div>
+									<div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>Berapa Minimum Order Quantity pesan produk kustom?</div>
 									<div class="acc-content current">
 										<div class="content">
-											<div class="text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors, and organizers.</div>
+											<div class="text">Untuk MOQ (Minimum Order Quantity) atau pemeesanan produk minimal ialah mulai dari 60 pcs per item.</div>
 										</div>
 									</div>
 								</li>
 											
 								<!-- Block -->
 								<li class="accordion block">
-									<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>Can you recommend any resources?</div>
+									<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>Berapa lama estimasi pengerjaan pesanan?</div>
 									<div class="acc-content">
 										<div class="content">
-											<div class="text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors, and organizers.</div>
+											<div class="text">Untuk proses pengerjaan estimasi kurang lebih selama 5 - 21 hari kerja. Estimasi ini tergantung kepada jumlah pesanan dan juga antrian pesanan saat itu.</div>
 										</div>
 									</div>
 								</li>
 								
 								<!-- Block -->
 								<li class="accordion block">
-									<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>How do you deal with negative comments?</div>
+									<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>Bagaimana cara untuk memesan produk Diwarna?</div>
 									<div class="acc-content">
 										<div class="content">
-											<div class="text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors, and organizers.</div>
+											<div class="text">Untuk pemesanan produk dapat dilakukan melalui sales marketing Diwarna yang bisa dihubungi via akun sosial media atau WA yang tercantum di website ini.</div>
 										</div>
 									</div>
 								</li>
 											
 								<!-- Block -->
-								<li class="accordion block">
+								<!-- <li class="accordion block">
 									<div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>How do you mount your camera?</div>
 									<div class="acc-content">
 										<div class="content">
 											<div class="text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors, and organizers.</div>
 										</div>
 									</div>
-								</li>
+								</li> -->
 								
 							</ul>
 						</div>
@@ -376,124 +335,6 @@ $this->title = 'Homepage';
 		</div>
 	</section>
 	<!-- End Newsletter One -->
-	
-	<!-- Main Footer -->
-	<footer class="main-footer">
-		<div class="main-footer_stars" style="background-image: url(assets/images/background/stars.png)"></div>
-		<div class="main-footer_pattern" style="background-image: url(assets/images/background/pattern-4.png)"></div>
-		<!-- Widgets Section -->
-		<div class="widgets-section">
-			<div class="auto-container">
-				<div class="row clearfix">
-							
-					<!-- Big Column -->
-					<div class="big-column col-lg-6 col-md-12 col-sm-12">
-						<div class="row clearfix">
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget">
-									<div class="footer-logo"><a href="index.html"><img src="assets/images/diwarna_logo.png" alt="" title=""></a></div>
-									<div class="footer-text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna pellentes.</div>
-									<!-- Social Box -->
-									<div class="footer_socials">
-										<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-										<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-										<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-										<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget links-widget">
-									<h5 class="footer-title">Useful Link</h5>
-									<ul class="footer-list">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">My Gear</a></li>
-										<li><a href="#">My Videos</a></li>
-										<li><a href="#">My Gallery</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">Join Me</a></li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<!-- Big Column -->
-					<div class="big-column col-lg-6 col-md-12 col-sm-12">
-						<div class="row clearfix">
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget links-widget">
-									<h5 class="footer-title">Resources</h5>
-									<ul class="footer-list">
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Faq\'s</a></li>
-										<li><a href="#">Help Center</a></li>
-										<li><a href="#">Case Studies</a></li>
-										<li><a href="#">Whitepapers</a></li>
-										<li><a href="#">services</a></li>
-										<li><a href="#">Contact Me</a></li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget instagram-widget">
-									<h5 class="footer-title">My Gallery</h5>
-									<div class="images-outer clearfix">
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/1.jpg"><img src="assets/images/gallery/instagram-1.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/2.jpg"><img src="assets/images/gallery/instagram-2.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/3.jpg"><img src="assets/images/gallery/instagram-3.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/4.jpg"><img src="assets/images/gallery/instagram-4.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/5.jpg"><img src="assets/images/gallery/instagram-5.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="assets/images/gallery/6.jpg"><img src="assets/images/gallery/instagram-6.jpg" alt=""></a></figure>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-				
-				<div class="footer-info_outer">
-					<h5 class="footer-title">Contact Me</h5>
-					<div class="row clearfix">
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Call Me</div>
-							<a href="tel:+56-955-525-285">+56-955-525-285</a>
-						</div>
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Email Me</div>
-							<a href="mailto:hello-bikers@vroom.com">hello-bikers@vroom.com</a>
-						</div>
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Location</div>
-							<div class="text">Stockton, New Hampshire</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<!-- End Widgets Section -->
 	
 	<!-- Search Popup -->
 	<div class="search-popup">
@@ -697,8 +538,9 @@ $this->title = 'Homepage';
 });
 </script>
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function() {
+	console.log('DOM siap!');
     const buttons = document.querySelectorAll('.btn-category');
     const slides = document.querySelectorAll('.swiper-slide');
     const swiper = new Swiper('.three-items_slider', {
@@ -706,30 +548,102 @@ document.addEventListener('DOMContentLoaded', function() {
             el: '.three-items_slider-pagination',
             clickable: true,
         },
-        slidesPerView: 3, // Ganti dengan jumlah slide yang ingin ditampilkan
+        slidesPerView: 3,
         spaceBetween: 10,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
-		speed: 600, // Waktu dalam milidetik untuk transisi
-    	effect: 'slide',
+        speed: 600,
+        effect: 'slide',
     });
+	console.log('Swiper diinisialisasi');
+
+
+	buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const kategori = button.getAttribute('data-kategori');
+        console.log('Tombol diklik:', kategori);
+
+        // Tampilkan banner dan galeri
+		console.log("Menampilkan banner dan galeri");
+        document.querySelector('.slider-one_content').style.display = 'block';
+        document.querySelector('.vlog-one').style.display = 'block';
+
+        // Cek status elemen
+        console.log('Status Banner:', document.querySelector('.slider-one_content').style.display);
+        console.log('Status Galeri:', document.querySelector('.vlog-one').style.display);
+
+        slides.forEach(slide => {
+            if (kategori === 'all' || slide.getAttribute('data-kategori') === kategori) {
+                slide.style.display = 'block'; // Tampilkan slide
+            } else {
+                slide.style.display = 'none'; // Sembunyikan slide
+            }
+        });
+
+        // Update Swiper setelah mengubah slide
+        swiper.update();
+    });
+});
+
+});
+</script> -->
+
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM siap!');
+    const buttons = document.querySelectorAll('.btn-category');
+    const slides = document.querySelectorAll('.swiper-slide');
+    const swiper = new Swiper('.three-items_slider', {
+        pagination: {
+            el: '.three-items_slider-pagination',
+            clickable: true,
+        },
+        slidesPerView: 3,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 600,
+        effect: 'slide',
+    });
+    console.log('Swiper diinisialisasi');
 
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const kategori = button.getAttribute('data-kategori');
+            console.log('Tombol diklik:', kategori);
 
-			// Hapus kelas aktif dari semua tombol
-            buttons.forEach(btn => btn.classList.remove('active'));
-            // Tambahkan kelas aktif ke tombol yang diklik
-            button.classList.add('active');
+            // Tampilkan banner dan galeri
+            console.log("Menampilkan banner dan galeri");
+            const sliderContent = document.querySelector('.slider-one_content');
+            const vlogOne = document.querySelector('.vlog-one');
 
+            if (sliderContent) {
+                sliderContent.style.display = 'block';
+                console.log('Slider One Content Ditampilkan');
+            } else {
+                console.log('Slider One Content Tidak Ditemukan');
+            }
+
+            if (vlogOne) {
+                vlogOne.style.display = 'block';
+                console.log('Vlog One Ditampilkan');
+            } else {
+                console.log('Vlog One Tidak Ditemukan');
+            }
+
+            // Reset semua slide menjadi tidak terlihat terlebih dahulu
+            slides.forEach(slide => {
+                slide.style.display = 'none'; // Sembunyikan semua slide
+            });
+
+            // Tampilkan slide yang sesuai dengan kategori
             slides.forEach(slide => {
                 if (kategori === 'all' || slide.getAttribute('data-kategori') === kategori) {
-                    slide.style.display = 'block'; // Tampilkan slide
-                } else {
-                    slide.style.display = 'none'; // Sembunyikan slide
+                    slide.style.display = 'block'; // Tampilkan slide yang sesuai
                 }
             });
 
@@ -738,7 +652,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-</script>
+</script> -->
+
 
 
 

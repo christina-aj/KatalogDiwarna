@@ -11,6 +11,8 @@ use yii\helpers\Url;
 $HomeDiwarnas = Url::to(['site/index']);
 $AboutDiwarnas = Url::to(['site/about-diwarna']);
 $ContactDiwarnas = Url::to(['site/contact-diwarna']);
+$FAQ = Url::to(['site/index#faq']);
+$Produk = Url::to(['site/index#produk-kami']);
 
 ?>
 
@@ -61,10 +63,10 @@ $ContactDiwarnas = Url::to(['site/contact-diwarna']);
                         </div>
                         <div class="right-box d-flex align-items-center flex-wrap">
                             <div class="header_socials d-flex align-items-center flex-wrap">
-                                <a class="fa-brands fa-facebook-f fa-fw" href="#"></a>
-                                <a class="fa-brands fa-instagram fa-fw" href="#"></a>
-                                <a class="fa-brands fa-twitter fa-fw" href="#"></a>
-                                <a class="fa-brands fa-google-plus fa-fw" href="#"></a>
+                                <a class="fa-brands fa-facebook-f fa-fw" href="https://www.facebook.com/diwarnaID/" target="_blank"></a>
+                                <a class="fa-brands fa-instagram fa-fw" href="https://www.instagram.com/diwarna/" target="_blank"></a>
+                                <a class="fa-brands fa-twitter fa-fw" href="https://twitter.com/diwarnaID/" target="_blank"></a>
+                                <a class="fa-solid fa-envelope" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMrlxjpnfDMJDffJkmvLFQGKcqkSdrHDhPGjpWKHpWbmkQhgzVpLHGsTzWQRHBbkrgQGHNQ" target="_blank"></a>
                             </div>
                         </div>
                     </div>
@@ -120,17 +122,138 @@ $ContactDiwarnas = Url::to(['site/contact-diwarna']);
         </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-bottom">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="column col-lg-6 col-md-12 col-sm-12">
-                        <div class="copyright">Copyright &copy; 2024 <a href="#">Diwarna</a> All Rights Reserved</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<!-- Main Footer -->
+	<footer class="main-footer">
+		<div class="main-footer_stars" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/stars.png)"></div>
+		<div class="main-footer_pattern" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/pattern-4.png)"></div>
+		<!-- Widgets Section -->
+		<div class="widgets-section">
+			<div class="auto-container">
+				<div class="row clearfix">
+							
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget">
+									<div class="footer-logo"><a href=<?= $HomeDiwarnas ?>><img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna_logo.png" alt="" title=""></a></div>
+									<div class="footer-text">Computerized and modern textiles embroidery - knitting solution</div>
+									<!-- Social Box -->
+									<div class="footer_socials">
+										<a href="https://www.facebook.com/diwarnaID/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://twitter.com/diwarnaID/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+										<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMrlxjpnfDMJDffJkmvLFQGKcqkSdrHDhPGjpWKHpWbmkQhgzVpLHGsTzWQRHBbkrgQGHNQ" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+										<a href="https://www.instagram.com/diwarna/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget links-widget">
+									<h5 class="footer-title">Link</h5>
+									<ul class="footer-list">
+										<li><a href=<?= $HomeDiwarnas ?>>Home</a></li>
+										<li><a href=<?= $AboutDiwarnas ?>>About Us</a></li>
+										<li><a href=<?= $Produk ?>>Produk</a></li>
+										<li><a href=<?= $FAQ ?>>FAQ</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget links-widget">
+									<h5 class="footer-title">Order</h5>
+									<ul class="footer-list">
+										<li><a href="#q ">Email</a></li>
+										<li><a href="#">Whatsapp</a></li>
+										<li><a href="#">Alamat</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget instagram-widget">
+									<h5 class="footer-title">Galeri Produk</h5>
+									<div class="images-outer clearfix">
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/1-SDN-TEMBOK-DUKUH.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/1-tembokdukuhicon.png" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/2-MADRASAH-AT-TIBYAN.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/2-madrasah.png" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/3-SMP-NEGERI-1-KOTABARU.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/3-smpkotabaru.png" alt=""></a></figure>
+										
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/4-SMK-NEGERI-3.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/4-smk3.png" alt=""></a></figure>
+										
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/5-TK-ADHYAKSA-VIII.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/5-tkadhyaksa.png" alt=""></a></figure>
+										
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/produk/6-TK-KRISTEN-PELITA-KASIH.png"><img src="<?= Yii::getAlias('@web') ?>/assets/images/produk/6-tkpelita.png" alt=""></a></figure>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="footer-info_outer">
+					<h5 class="footer-title">Contact Diwarna</h5>
+					<div class="row clearfix">
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Telepon</div>
+							<a href="tel:+56-955-525-285">0812-1725-7108</a>
+						</div>
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Email</div>
+							<a href="mailto:hello-bikers@vroom.com">info@diwarna.com</a>
+						</div>
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Lokasi</div>
+							<div class="text">Kedinding Lor Gg.Anggrek 36</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- End Widgets Section -->
+		
+		<!-- Footer Bottom -->
+		<div class="footer-bottom">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<div class="copyright">Copyright &copy; 2024 <a href="#">Diwarna</a> All Rights Reserved</div>
+					</div>
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<ul class="footer-bottom_nav">
+							<li><a href="#">Term & Condition</a></li>
+							<li><a href="#">Policy & Privacy </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+	<!-- End Main Footer -->
 
     <?php $this->endBody() ?>
 </body>

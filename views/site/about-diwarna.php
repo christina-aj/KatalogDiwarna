@@ -173,8 +173,8 @@
 					<div class="testimonial-three_title-outer">
 						<!-- Sec Title -->
 						<div class="sec-title">
-							<div class="sec-title_title"><i><img src="assets/images/main-slider/grid.svg" alt="" /></i> Client Feedback</div>
-							<h2 class="sec-title_heading">Empower My Journey with Your Feedback</h2>
+							<div class="sec-title_title"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> Testimonial</div>
+							<h2 class="sec-title_heading">Review Jujur Dari Customer Diwarna</h2>
 						</div>
 						
 						<!-- If we need navigation buttons -->
@@ -201,10 +201,10 @@
 												</div>
 												<i class="flaticon-quote"></i>
 											</div>
-											<div class="testimonial-block_three-text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors.</div>
+											<div class="testimonial-block_three-text">Terimakasih Kak barang telah kami terima dengan selamat dan baik keren pokoknya keren temen2 yg lain yang ingin order, gak perlu ragu hasil memuaskan pelayanan baik. pokoke mantep lah</div>
 											<div class="testimonial-block_two-name">
-												<strong>Leslie Alexander</strong>
-												#1 Moto Vlogger
+												<strong>Jack</strong>
+												Cetak Badge
 											</div>
 										</div>
 									</div>
@@ -354,7 +354,7 @@
 	<!-- End Journey One -->
 	
 	<!-- Gallery One -->
-	<section class="gallery-one">
+	<section class="gallery-one" id="galeri">
 		<div class="auto-container">
 			<div class="inner-container">
 				<!-- Sec Title -->
@@ -392,129 +392,6 @@
 		</div>
 	</section>
 	<!-- End Gallery One -->
-	
-
-	
-	<!-- Main Footer -->
-	<footer class="main-footer">
-		<div class="main-footer_stars" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/stars.png)"></div>
-		<div class="main-footer_pattern" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/pattern-4.png)"></div>
-		<!-- Widgets Section -->
-		<div class="widgets-section">
-			<div class="auto-container">
-				<div class="row clearfix">
-							
-					<!-- Big Column -->
-					<div class="big-column col-lg-6 col-md-12 col-sm-12">
-						<div class="row clearfix">
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget">
-									<div class="footer-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna_logo.png" alt="" title=""></a></div>
-									<div class="footer-text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna pellentes.</div>
-									<!-- Social Box -->
-									<div class="footer_socials">
-										<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-										<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-										<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-										<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget links-widget">
-									<h5 class="footer-title">Useful Link</h5>
-									<ul class="footer-list">
-										<li><a href="#">Home</a></li>
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">My Gear</a></li>
-										<li><a href="#">My Videos</a></li>
-										<li><a href="#">My Gallery</a></li>
-										<li><a href="#">Services</a></li>
-										<li><a href="#">Join Me</a></li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<!-- Big Column -->
-					<div class="big-column col-lg-6 col-md-12 col-sm-12">
-						<div class="row clearfix">
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget links-widget">
-									<h5 class="footer-title">Resources</h5>
-									<ul class="footer-list">
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Faq's</a></li>
-										<li><a href="#">Help Center</a></li>
-										<li><a href="#">Case Studies</a></li>
-										<li><a href="#">Whitepapers</a></li>
-										<li><a href="#">services</a></li>
-										<li><a href="#">Contact Me</a></li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget instagram-widget">
-									<h5 class="footer-title">My Gallery</h5>
-									<div class="images-outer clearfix">
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/1.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-1.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/2.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-2.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/3.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-3.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/4.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-4.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/5.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-5.jpg" alt=""></a></figure>
-										<!--Image Box-->
-										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/6.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-6.jpg" alt=""></a></figure>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-				
-				<div class="footer-info_outer">
-					<h5 class="footer-title">Contact Me</h5>
-					<div class="row clearfix">
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Call Me</div>
-							<a href="tel:+56-955-525-285">+56-955-525-285</a>
-						</div>
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Email Me</div>
-							<a href="mailto:hello-bikers@vroom.com">hello-bikers@vroom.com</a>
-						</div>
-						<!-- Column -->
-						<div class="column col-lg-4 col-md-4 col-sm-6">
-							<div class="title">Location</div>
-							<div class="text">Stockton, New Hampshire</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<!-- End Widgets Section -->
-		
-	</footer>
-	<!-- End Main Footer -->
 	
 	<!-- Search Popup -->
 	<div class="search-popup">
