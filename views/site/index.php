@@ -88,24 +88,13 @@ $this->title = 'Homepage';
 			<div class="sec-title">
 				<div class="sec-title_title"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> PRODUK KAMI</div>
 				<h2 class="sec-title_heading">Perlengkapan Sekolah <br> Dengan Bahan Berkualitas</h2>
-
-			<!-- <div class="vlog-one_button">
-				<a href="site/about-diwarna" class="theme-btn btn-style-two">
-					<span class="btn-wrap">
-						<span class="text-one">Lihat Lebih Banyak<i class="flaticon-next-1"></i></span>
-					</span>
-				</a>
-			</div>
-			</div> -->
-
-			<!-- Kategori Buttons -->
 			
-				<!-- <div class="category-buttons">
+				<div class="category-buttons">
 					<button class="btn btn-category" data-kategori="all">Semua Kategori</button>
 					<?php foreach ($kategori as $kat): ?>
 						<button class="btn btn-category" data-kategori="<?= $kat->slug ?>"><?= $kat->nama_kategori ?></button>
 					<?php endforeach; ?>
-				</div> -->
+				</div>
 			</div>
 
 			<div class="three-items_slider swiper-container">
@@ -538,11 +527,14 @@ $this->title = 'Homepage';
 });
 </script>
 
-<!-- <script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-	console.log('DOM siap!');
+    // console.log('DOM siap!');
+
     const buttons = document.querySelectorAll('.btn-category');
-    const slides = document.querySelectorAll('.swiper-slide');
+    const slides = document.querySelectorAll('.three-items_slider .swiper-slide');
+    
+    // Inisialisasi Swiper
     const swiper = new Swiper('.three-items_slider', {
         pagination: {
             el: '.three-items_slider-pagination',
@@ -557,86 +549,41 @@ document.addEventListener('DOMContentLoaded', function() {
         speed: 600,
         effect: 'slide',
     });
-	console.log('Swiper diinisialisasi');
+    // console.log('Swiper diinisialisasi');
 
-
-	buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        const kategori = button.getAttribute('data-kategori');
-        console.log('Tombol diklik:', kategori);
-
-        // Tampilkan banner dan galeri
-		console.log("Menampilkan banner dan galeri");
-        document.querySelector('.slider-one_content').style.display = 'block';
-        document.querySelector('.vlog-one').style.display = 'block';
-
-        // Cek status elemen
-        console.log('Status Banner:', document.querySelector('.slider-one_content').style.display);
-        console.log('Status Galeri:', document.querySelector('.vlog-one').style.display);
-
-        slides.forEach(slide => {
-            if (kategori === 'all' || slide.getAttribute('data-kategori') === kategori) {
-                slide.style.display = 'block'; // Tampilkan slide
-            } else {
-                slide.style.display = 'none'; // Sembunyikan slide
-            }
-        });
-
-        // Update Swiper setelah mengubah slide
-        swiper.update();
-    });
-});
-
-});
-</script> -->
-
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM siap!');
-    const buttons = document.querySelectorAll('.btn-category');
-    const slides = document.querySelectorAll('.swiper-slide');
-    const swiper = new Swiper('.three-items_slider', {
-        pagination: {
-            el: '.three-items_slider-pagination',
-            clickable: true,
-        },
-        slidesPerView: 3,
-        spaceBetween: 10,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 600,
-        effect: 'slide',
-    });
-    console.log('Swiper diinisialisasi');
-
+    // Event listener untuk setiap tombol kategori
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             const kategori = button.getAttribute('data-kategori');
-            console.log('Tombol diklik:', kategori);
+            // console.log('Tombol diklik:', kategori);
 
-            // Tampilkan banner dan galeri
-            console.log("Menampilkan banner dan galeri");
+            // Menghapus kelas 'active' dari semua tombol dan menambahkannya ke tombol yang diklik
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            // console.log('Kelas active ditambahkan ke tombol:', button);
+
+            // Menampilkan banner dan galeri
             const sliderContent = document.querySelector('.slider-one_content');
             const vlogOne = document.querySelector('.vlog-one');
 
             if (sliderContent) {
                 sliderContent.style.display = 'block';
-                console.log('Slider One Content Ditampilkan');
+                // console.log('Slider One Content Ditampilkan');
             } else {
-                console.log('Slider One Content Tidak Ditemukan');
+                // console.log('Slider One Content Tidak Ditemukan');
             }
 
             if (vlogOne) {
                 vlogOne.style.display = 'block';
-                console.log('Vlog One Ditampilkan');
+                // console.log('Vlog One Ditampilkan');
             } else {
-                console.log('Vlog One Tidak Ditemukan');
+                // console.log('Vlog One Tidak Ditemukan');
             }
 
             // Reset semua slide menjadi tidak terlihat terlebih dahulu
+            // console.log('Slides yang dipilih:', slides);
             slides.forEach(slide => {
+                // console.log('Memproses slide:', slide);
                 slide.style.display = 'none'; // Sembunyikan semua slide
             });
 
@@ -648,14 +595,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Update Swiper setelah mengubah slide
-            swiper.update();
+            swiper.update(); // Pastikan Swiper diperbarui setelah mengubah tampilan slide
         });
     });
 });
-</script> -->
-
-
-
+</script>
 
 
 <?php $this->endBody() ?>

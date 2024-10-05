@@ -71,15 +71,15 @@ CREATE TABLE IF NOT EXISTS `katalog_awal` (
 
 -- Dumping data for table katalog_diwarna.katalog_awal: ~9 rows (approximately)
 INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `desc_k_awal`, `url_k_awal`, `id_sub_kategori`, `slug`) VALUES
-	(1, 'badge-bordir', 'Badge Bordir', 'Murah Meriah', '/assets/images/katalog/badge bordir - diwarna.com.jpg', 5, 'badge-bordir'),
-	(2, 'badge-rajut', 'Badge Rajut', 'Murah Meriah', '/assets/images/katalog/badge rajut - diwarna.com.jpg', 5, 'badge-rajut'),
-	(3, 'badge-sablon', 'Badge Sablon', 'Murah Meriah', '/assets/images/katalog/badge sablon - diwarna.com.jpg', 5, 'badge-sablon'),
-	(4, 'topi-sekolah', 'Topi Sekolah', 'aklsklaks', '/assets/images/thumbs/topi sekolah - diwarna.com.jpg', 1, 'topi-sekolah'),
-	(5, 'topi-promosi', 'Topi Promosi', 'mjknmknmk', '/assets/images/thumbs/topi promosi - diwarna.com.jpg', 1, 'topi-promosi'),
-	(6, 'dasi-sekolah', 'Dasi Sekolah', 'kdd', '/assets/images/thumbs/dasi sekolah - diwarna.com.jpg', 4, 'dasi-sekolah'),
-	(7, 'sabuk-sekolah', 'Sabuk Sekolah', 'ddadsa', '/assets/images/thumbs/sabuk sekolah - diwarna.com.jpg', 3, 'sabuk-sekolah'),
-	(8, 'evolet-sekolah', 'Evolet Sekolah', 'dakndka', '/assets/images/thumbs/evolet sekolah - diwarna.com.jpg', 19, 'evolet-sekolah'),
-	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'kjxnncxjnakx', '/assets//images/thumbs/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
+	(1, 'badge-bordir', 'Badge Bordir', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge bordir - diwarna.com.jpg', 5, 'badge-bordir'),
+	(2, 'badge-rajut', 'Badge Rajut', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge rajut - diwarna.com.jpg', 5, 'badge-rajut'),
+	(3, 'badge-sablon', 'Badge Sablon', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge sablon - diwarna.com.jpg', 5, 'badge-sablon'),
+	(4, 'topi-sekolah', 'Topi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/topi sekolah - diwarna.com.jpg', 1, 'topi-sekolah'),
+	(5, 'topi-promosi', 'Topi Promosi', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/topi promosi - diwarna.com.jpg', 1, 'topi-promosi'),
+	(6, 'dasi-sekolah', 'Dasi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/dasi sekolah - diwarna.com.jpg', 4, 'dasi-sekolah'),
+	(7, 'sabuk-sekolah', 'Sabuk Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/sabuk sekolah - diwarna.com.jpg', 3, 'sabuk-sekolah'),
+	(8, 'evolet-sekolah', 'Evolet Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/evolet sekolah - diwarna.com.jpg', 19, 'evolet-sekolah'),
+	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'Murah, Bahan Berkualitas', '/assets//images/thumbs/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
 
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `migration` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
+-- Dumping data for table katalog_diwarna.migration: ~1 rows (approximately)
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1725906630);
 
