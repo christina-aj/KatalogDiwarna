@@ -34,10 +34,7 @@
 			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 			
 			<nav class="menu-box">
-				<!-- <div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/footer-diwarna_logo.png" alt="" title=""></a></div> -->
-				<div class="nav-logo"><a href="index.html"><img src="<?= \yii\helpers\Url::to($katalogAwal->url_k_awal) ?>" alt="" title=""></a></div>
-
-
+				<div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/footer-diwarna_logo.png" alt="" title=""></a></div>
 				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 			</nav>
 		</div>
@@ -47,15 +44,14 @@
 	<!-- End Main Header -->
 	
 	<!-- Page Title -->
-    <!-- <section class="page-title" style="background-image:url(<?= Yii::getAlias('@web') ?>/assets/images/background/1.jpg)"> -->
-    <!-- <section class="page-title">
+    <section class="page-title" style="background-image:url(<?= Yii::getAlias('@web') ?>/assets/images/background/1.jpg)">
         <div class="auto-container">
-			<h2>Detail Produk</h2>
+			<h2>Event Detail</h2>
 			<ul class="bread-crumb clearfix">
 				<li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
 				<li>Event Detail</li>
 			</ul>
-        </div> -->
+        </div>
     </section>
     <!-- End Page Title -->
 	
@@ -65,16 +61,16 @@
         	<div class="row clearfix">
 				
 				<!-- Content Side -->
-				<h2 class="event-detail_main_title">Detail Produk</h2>
-                <div class="content-side col-lg-7 col-md-12 col-sm-12">
+                <div class="content-side col-lg-8 col-md-12 col-sm-12">
 					<div class="event-detail.html">
 						<div class="event-detail_inner">
 							<div class="event-detail_image">
-								<!-- <img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/event-11.jpg" alt="" /> -->
-								<img src="<?= \yii\helpers\Url::to($katalogAwal->url_k_awal) ?>" alt="gambar produk" />
+								<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/event-11.jpg" alt="" />
 							</div>
-							<!-- <div class="event-detail_info">
+							<div class="event-detail_info">
 								<div class="row clearfix">
+									
+									<!-- Event Detail Info Block -->
 									<div class="event-detail_info-block col-xl-4 col-lg-6 col-md-6 col-sm-6">
 										<div class="event-detail_info-block_inner">
 											<div class="event-detail_info-block_content">
@@ -84,6 +80,8 @@
 											</div>
 										</div>
 									</div>
+									
+									<!-- Event Detail Info Block -->
 									<div class="event-detail_info-block col-xl-4 col-lg-6 col-md-6 col-sm-6">
 										<div class="event-detail_info-block_inner">
 											<div class="event-detail_info-block_content">
@@ -93,6 +91,8 @@
 											</div>
 										</div>
 									</div>
+									
+									<!-- Event Detail Info Block -->
 									<div class="event-detail_info-block col-xl-4 col-lg-6 col-md-6 col-sm-6">
 										<div class="event-detail_info-block_inner">
 											<div class="event-detail_info-block_content">
@@ -102,10 +102,23 @@
 											</div>
 										</div>
 									</div>
+									
 								</div>
-							</div> -->
+							</div>
+							<h3 class="event-detail_title">Expedition Embark on the Ultimate Adventure Tour!</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa me. Aliquam  hendrerit urna  vitae mattis tellus ultrices.. Pellentesque sit amet sapien fringilla, mattis Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam  hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices Maecenas ligula consectetur, ultric Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non our suscipit magna interdum.</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam  hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices Maecenas. Pellentesque sit amet sapien fringilla, mattis Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.</p>
+							<div class="event-detail_gallery">
+								<div class="row clearfix">
+									<div class="event-detail_gallery-image col-lg-6 col-md-6 col-sm-12">
+										<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/event-12.jpg" alt="" />
+									</div>
+									<div class="event-detail_gallery-image col-lg-6 col-md-6 col-sm-12">
+										<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/event-13.jpg" alt="" />
+									</div>
+								</div>
+							</div>
 							<h3 class="event-detail_title">Top Transforming Process</h3>
-							<p>URL Gambar: <?= $katalogAwal->url_k_awal ?></p>
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa me. Aliquam  hendrerit urna  vitae mattis tellus ultrices.. Pellentesque sit amet sapien fringilla, mattis Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam  hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices Maecenas ligula consectetur, ultric Maecenas vitae mattis tellus.</p>
 							<ul class="event-detail_list">
 								<li><i class="fa-solid fa-check fa-fw"></i>Expertise in Patent Protection</li>
@@ -113,17 +126,58 @@
 								<li><i class="fa-solid fa-check fa-fw"></i>Collaborative Partnership</li>
 							</ul>
 							<p>We are a team of the dedicated patent professionals, united by our commitment toour  excellence patent protection. With years of collective experience acros diverse industries.</p>
+							<h3 class="event-detail_title">See my Sponsor</h3>
+							<div class="event-detail_clients">
+								<div class="row clearfix">
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/1.png" alt="" /></a>
+										</div>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/2.png" alt="" /></a>
+										</div>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/3.png" alt="" /></a>
+										</div>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/4.png" alt="" /></a>
+										</div>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/5.png" alt="" /></a>
+										</div>
+									</div>
+									<!-- Column -->
+									<div class="column col-lg-4 col-md-4 col-sm-6">
+										<div class="client-image">
+											<a href="#"><img src="<?= Yii::getAlias('@web') ?>/assets/images/clients/6.png" alt="" /></a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				
 				<!-- Sidebar Side -->
-                <div class="sidebar-side col-lg-5 col-md-12 col-sm-12">
+                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
                 	<aside class="sidebar">
 						
 						<!-- Map Widget -->
 						<div class="sidebar-widget map-widget">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.1991734921066!2d112.77272807481249!3d-7.21810799278773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f84e25971a4f%3A0x507848b9324d3e60!2sJalan%20Kedinding%20Lor%20Gg.%20Anggrek%20No.36%2C%20RT.008%2FRW.01%2C%20Tanah%20Kali%20Kedinding%2C%20Kec.%20Kenjeran%2C%20Surabaya%2C%20Jawa%20Timur%2060129!5e0!3m2!1sid!2sid!4v1726853919975!5m2!1sid!2sid"></iframe>
+							<iframe src="https://maps.google.com/maps?q=636+5th+Ave%2C+New+York&t=&z=18&ie=UTF8&iwloc=&output=embed"></iframe>
 						</div>
 						
 						<div class="sidebar-inner">
@@ -136,12 +190,76 @@
 										Need Ticket Now?
 										<strong>Call me Now for Support</strong>
 									</div>
-									<!-- <div class="support-widget_pricing">Price start from <span>$20</span></div> -->
-									<a href="https://wa.me/6285731710407?text=tess" class="support-widget_button theme-btn">Buy Ticket Now <i class="flaticon-next"></i></a>
+									<div class="support-widget_pricing">Price start from <span>$20</span></div>
+									<a href="#" class="support-widget_button theme-btn">Buy Ticket Now <i class="flaticon-next"></i></a>
 									<div class="support-widget_off">*Include 20% Vat Include Here</div>
 								</div>
 							</div>
 							
+							<!-- Search Widget -->
+							<div class="sidebar-widget search-box">
+								<div class="widget-content">
+									<h5 class="sidebar-widget_title">Search Here</h5>
+									<form method="post" action="contact.html">
+										<div class="form-group">
+											<input type="search" name="search-field" value="" placeholder="Search..." required>
+											<button type="submit"><span class="icon fa fa-search"></span></button>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<!-- Post Widget -->
+							<div class="sidebar-widget post-widget">
+								<div class="widget-content">
+									<h5 class="sidebar-widget_title">Popular Post</h5>
+
+									<div class="post">
+										<div class="thumb"><a href="blog-detail.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-4.jpg" alt=""></a></div>
+										<h6><a href="blog-detail.html">Biking Through History Exploring Ancient Trails Landmarks</a></h6>
+										<div class="post-date"><i class="fa-regular fa-calendar fa-fw"></i> Mar 18, 2028</div>
+									</div>
+
+									<div class="post">
+										<div class="thumb"><a href="blog-detail.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-5.jpg" alt=""></a></div>
+										<h6><a href="blog-detail.html">Riding in Style Fashion Tips for the Fashionable Biker</a></h6>
+										<div class="post-date"><i class="fa-regular fa-calendar fa-fw"></i> Mar 18, 2028</div>
+									</div>
+
+									<div class="post">
+										<div class="thumb"><a href="blog-detail.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-6.jpg" alt=""></a></div>
+										<h6><a href="blog-detail.html">The Zen of Cycling Finding Peace and Serenity on the Bike</a></h6>
+										<div class="post-date"><i class="fa-regular fa-calendar fa-fw"></i> Mar 18, 2028</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- Service Widget -->
+							<div class="sidebar-widget category-widget">
+								<div class="widget-content">
+									<h5 class="sidebar-widget_title">Categories</h5>
+									<ul class="service-list">
+										<li><a href="#">Gear <span>(03)</span></a></li>
+										<li><a href="#">Training <span>(04)</span></a></li>
+										<li><a href="#">Destinations <span>(02)</span></a></li>
+										<li><a href="#">Events <span>(05)</span></a></li>
+										<li><a href="#">Inspiration <span>(02)</span></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Popular Tags -->
+							<div class="sidebar-widget popular-tags">
+								<div class="widget-content">
+									<h5 class="sidebar-widget_title">Popular Tags</h5>
+									<a href="#">Biking</a>
+									<a href="#">Travel</a>
+									<a href="#">Maintenance</a>
+									<a href="#">Fitness</a>
+									<a href="#">Events</a>
+								</div>
+							</div>
 							
 						</div>
 					</aside>
@@ -182,7 +300,145 @@
 		</div>
 	</section>
 	<!-- End Newsletter One -->
+	
+	<!-- Main Footer -->
+	<footer class="main-footer">
+		<div class="main-footer_stars" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/stars.png)"></div>
+		<div class="main-footer_pattern" style="background-image: url(<?= Yii::getAlias('@web') ?>/assets/images/background/pattern-4.png)"></div>
+		<!-- Widgets Section -->
+		<div class="widgets-section">
+			<div class="auto-container">
+				<div class="row clearfix">
+							
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
 
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget">
+									<div class="footer-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna_logo.png" alt="" title=""></a></div>
+									<div class="footer-text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna pellentes.</div>
+									<!-- Social Box -->
+									<div class="footer_socials">
+										<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+										<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+										<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget links-widget">
+									<h5 class="footer-title">Useful Link</h5>
+									<ul class="footer-list">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About Us</a></li>
+										<li><a href="#">My Gear</a></li>
+										<li><a href="#">My Videos</a></li>
+										<li><a href="#">My Gallery</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Join Me</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget links-widget">
+									<h5 class="footer-title">Resources</h5>
+									<ul class="footer-list">
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">Faq's</a></li>
+										<li><a href="#">Help Center</a></li>
+										<li><a href="#">Case Studies</a></li>
+										<li><a href="#">Whitepapers</a></li>
+										<li><a href="#">services</a></li>
+										<li><a href="#">Contact Me</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Footer Column -->
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget instagram-widget">
+									<h5 class="footer-title">My Gallery</h5>
+									<div class="images-outer clearfix">
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/1.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-1.jpg" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/2.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-2.jpg" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/3.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-3.jpg" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/4.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-4.jpg" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/5.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-5.jpg" alt=""></a></figure>
+										<!--Image Box-->
+										<figure class="image-box"><a class="lightbox-image" href="<?= Yii::getAlias('@web') ?>/assets/images/gallery/6.jpg"><img src="<?= Yii::getAlias('@web') ?>/assets/images/gallery/instagram-6.jpg" alt=""></a></figure>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="footer-info_outer">
+					<h5 class="footer-title">Contact Me</h5>
+					<div class="row clearfix">
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Call Me</div>
+							<a href="tel:+56-955-525-285">+56-955-525-285</a>
+						</div>
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Email Me</div>
+							<a href="mailto:hello-bikers@vroom.com">hello-bikers@vroom.com</a>
+						</div>
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-4 col-sm-6">
+							<div class="title">Location</div>
+							<div class="text">Stockton, New Hampshire</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- End Widgets Section -->
+		
+		<!-- Footer Bottom -->
+		<!-- <div class="footer-bottom">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<div class="copyright">Copyright &copy; 2024 <a href="#">Vroom</a> All Rights Reserved</div>
+					</div>
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<ul class="footer-bottom_nav">
+							<li><a href="#">Term & Condition</a></li>
+							<li><a href="#">Policy & Privacy </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		
+	</footer>
+	<!-- End Main Footer -->
+	
 	<!-- Search Popup -->
 	<div class="search-popup">
 		<div class="color-layer"></div>

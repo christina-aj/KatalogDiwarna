@@ -130,11 +130,27 @@ class SiteController extends Controller
     {
         return $this->render('contact-diwarna');
     }
+    
 
-    public function actionEventDetail()
+    // public function actionEventDetail()
+    // {
+    //     return $this->render('event-detail');
+    // }
+
+
+    public function actionEventDetail($id)
     {
-    return $this->render('event-detail');
+        // Ambil data dari tabel katalog_awal berdasarkan ID yang dipilih
+        $katalogAwal = KatalogAwal::findOne($id);
+    
+        if ($katalogAwal === null) {
+            throw new \yii\web\NotFoundHttpException('Produk tidak ditemukan');
+        }
+    
+        // Tampilkan view eventdetail dan kirim data produk dari tabel katalog_awal
+        return $this->render('event-detail', ['katalogAwal' => $katalogAwal]);
     }
+    
 
     public function actionIndex()
     {

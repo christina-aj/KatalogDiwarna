@@ -317,7 +317,7 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery-ui.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/validate.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
 
 <?php $this->endBody() ?>
 </body>

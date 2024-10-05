@@ -71,7 +71,7 @@
 							<!-- Sec Title -->
 							<div class="sec-title title-anim">
 								<div class="sec-title_title" style="font-size: 20px;"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> CV DIGITAL WARNA MANDIRI</div>
-								<h2 class="sec-title_heading" style="font-size: 50px;">Tentang Perusahaan</h2>
+								<h2 class="sec-title_heading" style="font-size: 50px; line-height: 1;">Tentang Perusahaan</h2>
 								<div class="sec-title_text">Berdiri sejak tahun 2017 dengan fokus utama terhadap kebutuhan sekolah.
 									Customer kami bervariasi dari toko, sales distributor dan sekolah langsung.
 									Sekolah yang tersebar di seluruh pelosok Indonesia membuat kami memiliki
@@ -221,10 +221,10 @@
 												</div>
 												<i class="flaticon-quote"></i>
 											</div>
-											<div class="testimonial-block_three-text">Lorem ipsum dolor sit amet consectetur adipis of our cing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.Interview fellow riders, vendors.</div>
+											<div class="testimonial-block_three-text">Hasilnya sangat rapi dan mantep, keren dan ngga meleset dari request. Yang mau order gas aja deh dijamin cakepp hasilnya. Pelayanan ramah walau banyak request haha</div>
 											<div class="testimonial-block_two-name">
-												<strong>Leslie Alexander</strong>
-												#1 Moto Vlogger
+												<strong>Merlin</strong>
+												Kaus Kaki Bordir
 											</div>
 										</div>
 									</div>
@@ -574,7 +574,7 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery-ui.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
 
 
 <?php $this->endBody() ?>

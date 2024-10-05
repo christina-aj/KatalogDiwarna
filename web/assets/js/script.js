@@ -71,27 +71,31 @@
 	}
 	
 	
-	//Mobile Nav Hide Show
-	if($('.mobile-menu').length){
-		
-		//$('.mobile-menu .menu-box').mCustomScrollbar();
-		
-		var mobileMenuContent = $('.main-header .nav-outer .main-menu').html();
-		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-		$('.sticky-header .main-menu').append(mobileMenuContent);
-		
-		//Hide / Show Submenu
+	// Mobile Nav Hide Show
+	if ($('.mobile-menu').length) {
+
+		// Mengambil konten dari menu utama
+		if ($('.mobile-menu .menu-box .menu-outer').is(':empty')) {
+			var mobileMenuContent = $('.main-header .nav-outer .main-menu').html();
+			$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
+		}
+
+		if ($('.sticky-header .main-menu').is(':empty')) {
+			$('.sticky-header .main-menu').append(mobileMenuContent);
+		}
+
+		// Hide / Show Submenu
 		$('.mobile-menu .navigation > li.dropdown > .dropdown-btn').on('click', function(e) {
 			e.preventDefault();
 			var target = $(this).parent('li').children('ul');
-			
-			if ($(target).is(':visible')){
+
+			if ($(target).is(':visible')) {
 				$(this).parent('li').removeClass('open');
 				$(target).slideUp(500);
 				$(this).parents('.navigation').children('li.dropdown').removeClass('open');
 				$(this).parents('.navigation').children('li.dropdown > ul').slideUp(500);
 				return false;
-			}else{
+			} else {
 				$(this).parents('.navigation').children('li.dropdown').removeClass('open');
 				$(this).parents('.navigation').children('li.dropdown').children('ul').slideUp(500);
 				$(this).parent('li').toggleClass('open');
@@ -99,18 +103,18 @@
 			}
 		});
 
-		//3rd Level Nav
+		// 3rd Level Nav
 		$('.mobile-menu .navigation > li.dropdown > ul  > li.dropdown > .dropdown-btn').on('click', function(e) {
 			e.preventDefault();
 			var targetInner = $(this).parent('li').children('ul');
-			
-			if ($(targetInner).is(':visible')){
+
+			if ($(targetInner).is(':visible')) {
 				$(this).parent('li').removeClass('open');
 				$(targetInner).slideUp(500);
 				$(this).parents('.navigation > ul').find('li.dropdown').removeClass('open');
 				$(this).parents('.navigation > ul').find('li.dropdown > ul').slideUp(500);
 				return false;
-			}else{
+			} else {
 				$(this).parents('.navigation > ul').find('li.dropdown').removeClass('open');
 				$(this).parents('.navigation > ul').find('li.dropdown > ul').slideUp(500);
 				$(this).parent('li').toggleClass('open');
@@ -118,28 +122,28 @@
 			}
 		});
 
-		//Menu Toggle Btn
+		// Menu Toggle Btn
 		$('.mobile-nav-toggler').on('click', function() {
 			$('body').addClass('mobile-menu-visible');
-
 		});
 
-		//Menu Toggle Btn
+		// Menu Toggle Btn untuk menutup
 		$('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function() {
 			$('body').removeClass('mobile-menu-visible');
 			$('.mobile-menu .navigation > li').removeClass('open');
 			$('.mobile-menu .navigation li ul').slideUp(0);
 		});
 
-		$(document).keydown(function(e){
-	        if(e.keyCode == 27) {
+		// Menutup menu ketika menekan tombol Escape (ESC)
+		$(document).keydown(function(e) {
+			if (e.keyCode == 27) {
 				$('body').removeClass('mobile-menu-visible');
-			$('.mobile-menu .navigation > li').removeClass('open');
-			$('.mobile-menu .navigation li ul').slideUp(0);
-        	}
-	    });
-		
+				$('.mobile-menu .navigation > li').removeClass('open');
+				$('.mobile-menu .navigation li ul').slideUp(0);
+			}
+		});
 	}
+
 
 
 	// Add Current Class Auto

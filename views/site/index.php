@@ -118,16 +118,16 @@ $this->title = 'Homepage';
 						<div class="event-block_one">
 							<div class="event-block_one-inner">
 								<div class="event-block_one-image">
-									<a href="event-detail.html"><img src="<?= $kat->url_k_awal ?>" alt="" /></a>
+									<a href="<?= \yii\helpers\Url::to(['site/event-detail', 'id' => $kat->katalog_awal_id]) ?>"><img src="<?= $kat->url_k_awal ?>" alt="" /></a>
 								</div>
 								<div class="event-block_one-content">
 									<div class="upper-box">
 										<!-- <div class="event-block_one-date">June 12-14, 2024</div> -->
-										<h4 class="event-block_one-title"><a href="event-detail.html"><?= $kat->text_k_awal?></a></h4>
+										<h4 class="event-block_one-title"><a href="<?= \yii\helpers\Url::to(['site/event-detail', 'id' => $kat->katalog_awal_id]) ?>"><?= $kat->text_k_awal?></a></h4>
 										<div class="event-block_one-text"><?= $kat->desc_k_awal?> </div>
 									</div>
 									<div class="lower-box">
-										<a class="event-block_one-location" href="event-detail.html"><i class="flaticon-send-1"></i>Lihat Produk Badge Bordir</a>
+										<a class="event-block_one-location" href="<?= \yii\helpers\Url::to(['site/event-detail', 'id' => $kat->katalog_awal_id]) ?>"><i class="flaticon-send-1"></i>Lihat Produk Badge Bordir</a>
 									</div>
 								</div>
 							</div>
@@ -516,7 +516,7 @@ $this->title = 'Homepage';
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery-ui.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
-<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 

@@ -587,7 +587,7 @@
 }
 
 .about-one .sec-title_text{
-	max-width:450px;
+	max-width: 100%;
 }
 
 .about-one_quote{
@@ -5026,6 +5026,7 @@
 	position:relative;
 	background-size:cover;
 	padding:150px 0px 150px;
+	background-color: var(--main-color);
 }
 
 .page-title:before{
@@ -5043,6 +5044,7 @@
 	z-index: 1;
 	text-transform:capitalize;
 	color:var(--color-three);
+	text-align: center;
 }
 
 .page-title .bread-crumb{
@@ -5577,7 +5579,7 @@
 
 .sidebar-page-container{
 	position:relative;
-	padding:100px 0px 70px;
+	padding:50px 0px 70px;
 }
 
 .sidebar-page-container .content-side,
@@ -6605,7 +6607,13 @@
 	color:var(--white-color);
 	font-family: "Roboto Condensed", sans-serif;
 }
-
+.event-detail_main_title{
+	position: relative;
+	text-align: center;
+	color: var(--color-three);
+	margin-bottom: 15px;
+	font-size: 50px;
+}
 .event-detail_title{
 	position:relative;
 	margin-bottom:20px;

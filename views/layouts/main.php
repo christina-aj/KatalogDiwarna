@@ -114,6 +114,18 @@ $Produk = Url::to(['site/index#produk-kami']);
                 </div>
             </div>
         </div>
+
+		<!-- Mobile Menu  -->
+		<div class="mobile-menu">
+			<div class="menu-backdrop"></div>
+			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
+			
+			<nav class="menu-box">
+				<div class="nav-logo"><a href="index.html"><img src="assets/images/footer-diwarna_logo.png" alt="" title=""></a></div>
+				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+			</nav>
+		</div>
+		<!-- End Mobile Menu -->
     </header>
 
     <main id="main" class="flex-shrink-0" role="main">
@@ -254,6 +266,7 @@ $Produk = Url::to(['site/index#produk-kami']);
 		
 	</footer>
 	<!-- End Main Footer -->
+	<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
 
     <?php $this->endBody() ?>
 </body>
