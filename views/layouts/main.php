@@ -183,13 +183,23 @@ $Produk = Url::to(['site/index#produk-kami']);
 						<div class="row clearfix">
 
 							<!-- Footer Column -->
-							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+							<!-- <div class="footer_column col-lg-6 col-md-6 col-sm-12">
 								<div class="footer-widget links-widget">
 									<h5 class="footer-title">Order</h5>
 									<ul class="footer-list">
 										<li><a href="#q ">Email</a></li>
 										<li><a href="#">Whatsapp</a></li>
 										<li><a href="#">Alamat</a></li>
+									</ul>
+								</div>
+							</div> -->
+
+							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget links-widget">
+									<h5 class="footer-title">Pengujung</h5>
+									<ul class="footer-list">
+									<!-- <a href="https://info.flagcounter.com/3CFK"><img src="https://s11.flagcounter.com/count2/3CFK/bg_EEEEEE/txt_474747/border_EEEEEE/columns_2/maxflags_8/viewers_3/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0"></a> -->
+									<a href=#><img src="https://s11.flagcounter.com/count2/3CFK/bg_EEEEEE/txt_474747/border_EEEEEE/columns_2/maxflags_8/viewers_3/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0"></a>
 									</ul>
 								</div>
 							</div>

@@ -132,13 +132,13 @@
 							<div class="sidebar-widget support-widget">
 								<div class="widget-content">
 									<div class="support-phone">
-										<span class="icon flaticon-call"></span>
-										Need Ticket Now?
-										<strong>Call me Now for Support</strong>
+										<span class="icon flaticon-whatsapp"></span>
+										Tertarik Membeli?
+										<strong>Segera Hubungi Untuk Order / Tanya</strong>
 									</div>
 									<!-- <div class="support-widget_pricing">Price start from <span>$20</span></div> -->
-									<a href="https://wa.me/6285731710407?text=tess" class="support-widget_button theme-btn">Buy Ticket Now <i class="flaticon-next"></i></a>
-									<div class="support-widget_off">*Include 20% Vat Include Here</div>
+									<a href="https://wa.me/6285731710407?text=tess" class="support-widget_button theme-btn">Order Sekarang<i class="flaticon-next"></i></a>
+									<div class="support-widget_off">Diskusikan request di Whatsapp</div>
 								</div>
 							</div>
 							
