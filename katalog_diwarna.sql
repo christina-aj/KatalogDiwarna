@@ -19,6 +19,31 @@
 CREATE DATABASE IF NOT EXISTS `katalog_diwarna` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `katalog_diwarna`;
 
+-- Dumping structure for table katalog_diwarna.detail_produk
+CREATE TABLE IF NOT EXISTS `detail_produk` (
+  `id_detail_p` int NOT NULL AUTO_INCREMENT,
+  `katalog_awal_id` int NOT NULL,
+  `deskripsi_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
+  `list_desk_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
+  `penutup_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
+  `linkwa_detail_p` varchar(250) COLLATE armscii8_bin NOT NULL DEFAULT '#',
+  PRIMARY KEY (`id_detail_p`) USING BTREE,
+  KEY `katalog_awal_id` (`katalog_awal_id`),
+  CONSTRAINT `fk-katalog_awal_id` FOREIGN KEY (`katalog_awal_id`) REFERENCES `katalog_awal` (`katalog_awal_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+
+-- Dumping data for table katalog_diwarna.detail_produk: ~9 rows (approximately)
+INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `list_desk_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
+	(1, 1, 'badgebadegejajdjadad', 'testttt', 'blbablallba', 'https://wa.me/6285731710407?text=tess'),
+	(2, 2, NULL, NULL, NULL, '#'),
+	(3, 3, NULL, NULL, NULL, '#'),
+	(4, 4, NULL, NULL, NULL, '#'),
+	(5, 5, NULL, NULL, NULL, '#'),
+	(6, 6, NULL, NULL, NULL, '#'),
+	(7, 7, NULL, NULL, NULL, '#'),
+	(8, 8, NULL, NULL, NULL, '#'),
+	(9, 9, NULL, NULL, NULL, '#');
+
 -- Dumping structure for table katalog_diwarna.foto_produk
 CREATE TABLE IF NOT EXISTS `foto_produk` (
   `id_foto_produk` int NOT NULL AUTO_INCREMENT,
@@ -105,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `migration` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Dumping data for table katalog_diwarna.migration: ~1 rows (approximately)
+-- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1725906630);
 

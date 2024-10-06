@@ -51,4 +51,9 @@ class KatalogAwal extends \yii\db\ActiveRecord
     {
         return $this->hasOne(SubKategori::class, ['id_sub_kategori' => 'id_sub_kategori']);
     }
+
+    public function getDetailProduk()
+    {
+        return $this->hasOne(DetailProduk::class, ['katalog_awal_id' => 'katalog_awal_id']);
+    }
 }

@@ -140,15 +140,18 @@ class SiteController extends Controller
 
     public function actionEventDetail($id)
     {
-        // Ambil data dari tabel katalog_awal berdasarkan ID yang dipilih
-        $katalogAwal = KatalogAwal::findOne($id);
-    
-        if ($katalogAwal === null) {
-            throw new \yii\web\NotFoundHttpException('Produk tidak ditemukan');
-        }
-    
-        // Tampilkan view eventdetail dan kirim data produk dari tabel katalog_awal
-        return $this->render('event-detail', ['katalogAwal' => $katalogAwal]);
+    // Ambil data dari tabel katalog_awal berdasarkan ID yang dipilih dan join dengan detail_produk
+    $katalogAwal = KatalogAwal::find()
+        ->with('detailProduk')  // Mengambil data dari tabel detail_produk
+        ->where(['katalog_awal_id' => $id])
+        ->one();
+
+    if ($katalogAwal === null) {
+        throw new \yii\web\NotFoundHttpException('Produk tidak ditemukan');
+    }
+
+    // Tampilkan view event-detail dan kirim data produk dari tabel katalog_awal
+    return $this->render('event-detail', ['katalogAwal' => $katalogAwal]);
     }
     
 
