@@ -128,18 +128,6 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
 	(4, 'Alat Tulis Kantor', 'atk', 0),
 	(5, 'Percetakan', 'percetakan', 0);
 
--- Dumping structure for table katalog_diwarna.migration
-CREATE TABLE IF NOT EXISTS `migration` (
-  `version` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `apply_time` int DEFAULT NULL,
-  PRIMARY KEY (`version`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
-DELETE FROM `migration`;
-INSERT INTO `migration` (`version`, `apply_time`) VALUES
-	('m000000_000000_base', 1725906630);
-
 -- Dumping structure for table katalog_diwarna.sub_kategori
 CREATE TABLE IF NOT EXISTS `sub_kategori` (
   `id_sub_kategori` int NOT NULL AUTO_INCREMENT,
