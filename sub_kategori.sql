@@ -22,9 +22,9 @@ USE `katalog_diwarna`;
 -- Dumping structure for table katalog_diwarna.sub_kategori
 CREATE TABLE IF NOT EXISTS `sub_kategori` (
   `id_sub_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_sub_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama_sub_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_kategori` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id_sub_kategori`),
   KEY `id_kategori` (`id_kategori`) USING BTREE,
   CONSTRAINT `FK-id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`)

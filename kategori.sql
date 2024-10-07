@@ -22,8 +22,8 @@ USE `katalog_diwarna`;
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
   `id_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 tdk tampil, 1 tampil',
   PRIMARY KEY (`id_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

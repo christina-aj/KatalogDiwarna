@@ -23,17 +23,18 @@ USE `katalog_diwarna`;
 CREATE TABLE IF NOT EXISTS `detail_produk` (
   `id_detail_p` int NOT NULL AUTO_INCREMENT,
   `katalog_awal_id` int NOT NULL,
-  `deskripsi_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `list_desk_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `penutup_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `linkwa_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '#',
+  `deskripsi_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `list_desk_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `penutup_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `linkwa_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '#',
   PRIMARY KEY (`id_detail_p`) USING BTREE,
   KEY `katalog_awal_id` (`katalog_awal_id`),
   CONSTRAINT `fk-katalog_awal_id` FOREIGN KEY (`katalog_awal_id`) REFERENCES `katalog_awal` (`katalog_awal_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.detail_produk: ~0 rows (approximately)
-REPLACE INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `list_desk_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
+DELETE FROM `detail_produk`;
+INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `list_desk_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
 	(1, 1, 'badgebadegejajdjadad', 'testttt', 'blbablallba', 'https://wa.me/6285731710407?text=tess'),
 	(2, 2, NULL, NULL, NULL, '#'),
 	(3, 3, NULL, NULL, NULL, '#'),
@@ -47,15 +48,16 @@ REPLACE INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detai
 -- Dumping structure for table katalog_diwarna.foto_produk
 CREATE TABLE IF NOT EXISTS `foto_produk` (
   `id_foto_produk` int NOT NULL AUTO_INCREMENT,
-  `alt_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
-  `text_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
-  `desc_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
-  `url_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '0',
+  `alt_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
+  `text_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
+  `desc_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
+  `url_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
   PRIMARY KEY (`id_foto_produk`)
 ) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.foto_produk: ~7 rows (approximately)
-REPLACE INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produk`, `desc_foto_produk`, `url_foto_produk`) VALUES
+DELETE FROM `foto_produk`;
+INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produk`, `desc_foto_produk`, `url_foto_produk`) VALUES
 	(1, 'KAOS KAKI TEMBOK DUKUH', 'KAOS KAKI', 'SDN TEMBOK DUKUH', '/assets/images/produk/1-SDN-TEMBOK-DUKUH.png'),
 	(2, 'BADGE MADRASAH', 'BADGE BORDIR', 'MADRASAH AT TIBYAN', '/assets/images/produk/2-MADRASAH-AT-TIBYAN.png'),
 	(3, 'KAOS KAKI SMP NEGERI 1', 'KAOS KAKI', 'SMP NEGERI 1 KOTABARU', '/assets/images/produk/3-SMP-NEGERI-1-KOTABARU.png'),
@@ -68,34 +70,36 @@ REPLACE INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_prod
 -- Dumping structure for table katalog_diwarna.foto_slide
 CREATE TABLE IF NOT EXISTS `foto_slide` (
   `id_foto_slide` int NOT NULL AUTO_INCREMENT,
-  `judul_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `desk_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `alt_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `url_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `judul_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `desk_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `alt_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `url_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_foto_slide`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.foto_slide: ~2 rows (approximately)
-REPLACE INTO `foto_slide` (`id_foto_slide`, `judul_foto_slide`, `desk_foto_slide`, `alt_foto_slide`, `url_foto_slide`) VALUES
+DELETE FROM `foto_slide`;
+INSERT INTO `foto_slide` (`id_foto_slide`, `judul_foto_slide`, `desk_foto_slide`, `alt_foto_slide`, `url_foto_slide`) VALUES
 	(1, 'Badge Untuk Segala Keperluan', 'Badge Bordir, Rajut, Sablon', 'Badge Bordir dll', 'assets/images/produk/slider1.png'),
 	(2, 'Kaos Kaki Segala Keperluan', 'Dengan Bahan Terpilih', 'Kaos Kaki', 'assets/images/produk/slider2.png');
 
 -- Dumping structure for table katalog_diwarna.katalog_awal
 CREATE TABLE IF NOT EXISTS `katalog_awal` (
   `katalog_awal_id` int NOT NULL AUTO_INCREMENT,
-  `alt_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `text_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `desc_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `url_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `alt_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `desc_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `url_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_sub_kategori` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`katalog_awal_id`),
   KEY `id_sub_kategori` (`id_sub_kategori`) USING BTREE,
   CONSTRAINT `FK-id_sub_kategori` FOREIGN KEY (`id_sub_kategori`) REFERENCES `sub_kategori` (`id_sub_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.katalog_awal: ~9 rows (approximately)
-REPLACE INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `desc_k_awal`, `url_k_awal`, `id_sub_kategori`, `slug`) VALUES
+DELETE FROM `katalog_awal`;
+INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `desc_k_awal`, `url_k_awal`, `id_sub_kategori`, `slug`) VALUES
 	(1, 'badge-bordir', 'Badge Bordir', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge bordir - diwarna.com.jpg', 5, 'badge-bordir'),
 	(2, 'badge-rajut', 'Badge Rajut', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge rajut - diwarna.com.jpg', 5, 'badge-rajut'),
 	(3, 'badge-sablon', 'Badge Sablon', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge sablon - diwarna.com.jpg', 5, 'badge-sablon'),
@@ -109,14 +113,15 @@ REPLACE INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `de
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
   `id_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 tdk tampil, 1 tampil',
   PRIMARY KEY (`id_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.kategori: ~5 rows (approximately)
-REPLACE INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
+DELETE FROM `kategori`;
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
 	(1, 'Pakaian', 'pakaian', 1),
 	(2, 'Aksesoris', 'aksesoris', 1),
 	(3, 'Suvenir', 'suvenir', 0),
@@ -125,28 +130,30 @@ REPLACE INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUE
 
 -- Dumping structure for table katalog_diwarna.migration
 CREATE TABLE IF NOT EXISTS `migration` (
-  `version` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `version` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `apply_time` int DEFAULT NULL,
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
-REPLACE INTO `migration` (`version`, `apply_time`) VALUES
+DELETE FROM `migration`;
+INSERT INTO `migration` (`version`, `apply_time`) VALUES
 	('m000000_000000_base', 1725906630);
 
 -- Dumping structure for table katalog_diwarna.sub_kategori
 CREATE TABLE IF NOT EXISTS `sub_kategori` (
   `id_sub_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_sub_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama_sub_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_kategori` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id_sub_kategori`),
   KEY `id_kategori` (`id_kategori`) USING BTREE,
   CONSTRAINT `FK-id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.sub_kategori: ~19 rows (approximately)
-REPLACE INTO `sub_kategori` (`id_sub_kategori`, `nama_sub_kategori`, `id_kategori`, `slug`) VALUES
+DELETE FROM `sub_kategori`;
+INSERT INTO `sub_kategori` (`id_sub_kategori`, `nama_sub_kategori`, `id_kategori`, `slug`) VALUES
 	(1, 'Topi', 1, 'topi'),
 	(2, 'Kemeja', 1, 'kemeja'),
 	(3, 'Sabuk', 1, 'sabuk'),
