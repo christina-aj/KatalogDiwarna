@@ -23,16 +23,16 @@ USE `katalog_diwarna`;
 CREATE TABLE IF NOT EXISTS `detail_produk` (
   `id_detail_p` int NOT NULL AUTO_INCREMENT,
   `katalog_awal_id` int NOT NULL,
-  `deskripsi_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `list_desk_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `penutup_detail_p` varchar(250) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `linkwa_detail_p` varchar(250) COLLATE armscii8_bin NOT NULL DEFAULT '#',
+  `deskripsi_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `list_desk_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `penutup_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `linkwa_detail_p` varchar(250) COLLATE utf8mb4_bin NOT NULL DEFAULT '#',
   PRIMARY KEY (`id_detail_p`) USING BTREE,
   KEY `katalog_awal_id` (`katalog_awal_id`),
   CONSTRAINT `fk-katalog_awal_id` FOREIGN KEY (`katalog_awal_id`) REFERENCES `katalog_awal` (`katalog_awal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Dumping data for table katalog_diwarna.detail_produk: ~9 rows (approximately)
+-- Dumping data for table katalog_diwarna.detail_produk: ~0 rows (approximately)
 INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `list_desk_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
 	(1, 1, 'badgebadegejajdjadad', 'testttt', 'blbablallba', 'https://wa.me/6285731710407?text=tess'),
 	(2, 2, NULL, NULL, NULL, '#'),
@@ -47,12 +47,12 @@ INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail
 -- Dumping structure for table katalog_diwarna.foto_produk
 CREATE TABLE IF NOT EXISTS `foto_produk` (
   `id_foto_produk` int NOT NULL AUTO_INCREMENT,
-  `alt_foto_produk` varchar(250) COLLATE armscii8_bin DEFAULT '0',
-  `text_foto_produk` varchar(250) COLLATE armscii8_bin DEFAULT '0',
-  `desc_foto_produk` varchar(250) COLLATE armscii8_bin DEFAULT '0',
-  `url_foto_produk` varchar(250) COLLATE armscii8_bin DEFAULT '0',
+  `alt_foto_produk` varchar(250) COLLATE utf8mb4_bin DEFAULT '0',
+  `text_foto_produk` varchar(250) COLLATE utf8mb4_bin DEFAULT '0',
+  `desc_foto_produk` varchar(250) COLLATE utf8mb4_bin DEFAULT '0',
+  `url_foto_produk` varchar(250) COLLATE utf8mb4_bin DEFAULT '0',
   PRIMARY KEY (`id_foto_produk`)
-) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.foto_produk: ~7 rows (approximately)
 INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produk`, `desc_foto_produk`, `url_foto_produk`) VALUES
@@ -68,12 +68,12 @@ INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produ
 -- Dumping structure for table katalog_diwarna.foto_slide
 CREATE TABLE IF NOT EXISTS `foto_slide` (
   `id_foto_slide` int NOT NULL AUTO_INCREMENT,
-  `judul_foto_slide` varchar(255) COLLATE armscii8_bin DEFAULT NULL,
-  `desk_foto_slide` varchar(255) COLLATE armscii8_bin DEFAULT NULL,
-  `alt_foto_slide` varchar(255) COLLATE armscii8_bin DEFAULT NULL,
-  `url_foto_slide` varchar(255) COLLATE armscii8_bin DEFAULT NULL,
+  `judul_foto_slide` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `desk_foto_slide` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `alt_foto_slide` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `url_foto_slide` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`id_foto_slide`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.foto_slide: ~2 rows (approximately)
 INSERT INTO `foto_slide` (`id_foto_slide`, `judul_foto_slide`, `desk_foto_slide`, `alt_foto_slide`, `url_foto_slide`) VALUES
@@ -83,16 +83,16 @@ INSERT INTO `foto_slide` (`id_foto_slide`, `judul_foto_slide`, `desk_foto_slide`
 -- Dumping structure for table katalog_diwarna.katalog_awal
 CREATE TABLE IF NOT EXISTS `katalog_awal` (
   `katalog_awal_id` int NOT NULL AUTO_INCREMENT,
-  `alt_k_awal` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `text_k_awal` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
-  `desc_k_awal` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `url_k_awal` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  `alt_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `text_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `desc_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `url_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `id_sub_kategori` int NOT NULL,
-  `slug` varchar(255) COLLATE armscii8_bin NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`katalog_awal_id`),
   KEY `id_sub_kategori` (`id_sub_kategori`) USING BTREE,
   CONSTRAINT `FK-id_sub_kategori` FOREIGN KEY (`id_sub_kategori`) REFERENCES `sub_kategori` (`id_sub_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.katalog_awal: ~9 rows (approximately)
 INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `desc_k_awal`, `url_k_awal`, `id_sub_kategori`, `slug`) VALUES
@@ -109,11 +109,11 @@ INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `des
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
   `id_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_kategori` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin DEFAULT NULL,
-  `slug` varchar(255) COLLATE armscii8_bin DEFAULT NULL,
+  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 tdk tampil, 1 tampil',
   PRIMARY KEY (`id_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.kategori: ~5 rows (approximately)
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
@@ -125,10 +125,10 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
 
 -- Dumping structure for table katalog_diwarna.migration
 CREATE TABLE IF NOT EXISTS `migration` (
-  `version` varchar(180) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  `version` varchar(180) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `apply_time` int DEFAULT NULL,
   PRIMARY KEY (`version`)
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.migration: ~0 rows (approximately)
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
@@ -137,13 +137,13 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 -- Dumping structure for table katalog_diwarna.sub_kategori
 CREATE TABLE IF NOT EXISTS `sub_kategori` (
   `id_sub_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_sub_kategori` varchar(255) COLLATE armscii8_bin NOT NULL,
+  `nama_sub_kategori` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `id_kategori` int NOT NULL,
-  `slug` varchar(255) COLLATE armscii8_bin NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`id_sub_kategori`),
   KEY `id_kategori` (`id_kategori`) USING BTREE,
   CONSTRAINT `FK-id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table katalog_diwarna.sub_kategori: ~19 rows (approximately)
 INSERT INTO `sub_kategori` (`id_sub_kategori`, `nama_sub_kategori`, `id_kategori`, `slug`) VALUES
