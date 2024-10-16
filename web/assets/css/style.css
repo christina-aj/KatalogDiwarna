@@ -967,6 +967,12 @@
 	margin-bottom:30px;
 }
 
+.event-block_ones{
+	position:relative;
+	margin-bottom:0px;
+}
+
+
 .event-block_one-inner{
 	position:relative;
 }
@@ -1020,6 +1026,14 @@
 	z-index:2;
 	border:1px solid rgba(var(--color-three-rgb), 0.15);
 	border-top:none;
+}
+
+.event-block_one-contents{
+	position:relative;
+	z-index:2;
+	border:1px solid rgba(var(--color-three-rgb), 0.15);
+	border-top:none;
+	background-color: black;
 }
 
 .event-block_one .upper-box{

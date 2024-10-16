@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>DIWARNA | About Us</title>
+<?php
 
-<!-- Stylesheets -->
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/bootstrap.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/style.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/meanmenu.min.css" rel="stylesheet">
-<link href="<?= Yii::getAlias('@web') ?>/assets/css/responsive.css" rel="stylesheet">
+/** @var yii\web\View $this */
+/** @var string $content */
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+use app\assets\AppAsset;
+use app\widgets\SidebarWidget;
+use yii\helpers\Url;
+use yii\bootstrap5\Html;
 
-<link rel="shortcut icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.png" type="image/x-icon">
-<link rel="icon" href="<?= Yii::getAlias('@web') ?>/assets/images/favicon.png" type="image/x-icon">
 
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
+$this->title = 'Users';
+$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Homepage'; 
+?>
 
 
 <?php $this->beginBody() ?>
@@ -393,19 +382,6 @@
 	</section>
 	<!-- End Gallery One -->
 	
-	<!-- Search Popup -->
-	<div class="search-popup">
-		<div class="color-layer"></div>
-		<button class="close-search"><span class="flaticon-close-1"></span></button>
-		<form method="post" action="blog.html">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-			</div>
-		</form>
-	</div>
-	<!-- End Search Popup -->
-	
 	<!-- Sidebar Cart Item -->
 	<div class="xs-sidebar-group info-group">
 		<div class="xs-overlay xs-bg-black"></div>
@@ -568,7 +544,6 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/ScrollToPlugin.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/ScrollSmoother.min.js"></script>
 
-<script src="<?= Yii::getAlias('@web') ?>/assets/js/magnific-popup.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.meanmenu.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/nav-tool.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery-ui.js"></script>

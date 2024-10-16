@@ -10,7 +10,7 @@
 
 .main-header{
 	position:relative;
-	z-index:1001;
+	z-index:1000;
 	width:100%;
 	background-color:var(--color-four);
 	border-bottom:1px solid rgba(var(--white-color-rgb), 0.15);
@@ -1209,15 +1209,124 @@
 	gap:20px;
 }
 
-.main-header .outer-box .header_button-box{
-	position:relative;
-	height:55px;
+.main-header .outer-box .header_button-box {
+    position: relative;
+    height: 55px;
 }
 
-.header-options_box{
-	position:relative;
-	padding:15px 18px 15px;
-	border:1px solid rgba(var(--white-color-rgb), 0.15);
+.main-header .header-options_box {
+    position: relative;
+    padding: 15px 18px 15px;
+    border: 1px solid rgba(var(--white-color-rgb), 0.15);
+}
+
+.main-header .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.main-header .search-container {
+    /* display: flex; */
+	display: none; 
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+	position: relative;
+}
+
+.main-header .search-overlay input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* .main-header #close-search {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+} */
+
+.main-header .search-overlay .close-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+	z-index: 9999;
+}
+
+.main-header .suggestions-box {
+	display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 5px;
+    z-index: 1000;
+}
+
+.main-header .suggestions-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .suggestions-box li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.main-header .suggestions-box li:hover {
+    background-color: #f5f5f5;
+}
+
+.main-header .suggestions-box li .suggestion-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.main-header .suggestions-box li .suggestion-category {
+    font-size: 0.8em;
+    color: #777;
+    margin-left: 5px;
+}
+
+/* Styling untuk scrollbar */
+.main-header .suggestions-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-header .suggestions-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.main-header .suggestions-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.main-header .suggestions-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* Search Box Outer */
@@ -1327,10 +1436,10 @@
 
 .search-popup .close-search{
 	position: absolute;
-	right: 25px;
-	top: 25px;
+	right: 250px;
+	top: 50px;
 	cursor:pointer;
-	background:none;
+	margin-bottom: 10px;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
@@ -1338,7 +1447,9 @@
 	transition: all 500ms ease;
 	opacity: 0;
 	z-index:9999;
-	visibility: hidden;
+	background: none;
+	/* visibility: hidden; */
+	color: #ed0b0b;
 }
 
 .search-popup .close-search span{
@@ -1347,7 +1458,8 @@
 	z-index:2;
 	font-weight:800;
 	font-size:22px;
-	color: var(--black-color);
+	color: #202020;
+	background: none;
 	font-family: "flaticon_vroom-icons";
 }
 
@@ -1359,6 +1471,26 @@
 	-ms-transition-delay: 300ms;
 	-o-transition-delay: 300ms;
 	transition-delay: 300ms;
+}
+
+.search-popup .close-search::after {
+    content: "Tutup Search"; 
+    position: absolute;
+    top: 30px; 
+    right: 0;
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+    z-index: 10000; 
+}
+
+.search-popup .close-search:hover::after {
+    opacity: 1; /* Tampilkan saat di-hover */
 }
 
 .search-popup form{

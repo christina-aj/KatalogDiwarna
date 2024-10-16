@@ -696,17 +696,239 @@
     /////////////////////////////////////////////////////
 
 
+	// Header Search functionality
 
-	//Header Search
-	if($('.search-box-outer').length) {
-		$('.search-box-outer').on('click', function() {
-			$('body').addClass('search-active');
-		});
-		$('.close-search').on('click', function() {
-			$('body').removeClass('search-active');
-		});
-	}
 
+	$(document).ready(function() {
+		var catalogData = [];
+		var eventDetailUrl = '/site/event-detail';
+		
+		// Ambil data dari elemen tersembunyi
+		$('#hidden-catalog-data .catalog-item').each(function() {
+			catalogData.push({
+				id: $(this).data('id'),
+				title: $(this).data('title'),
+				desc: $(this).data('desc'),
+				url: $(this).data('url')
+			});
+		});
+		
+		console.log('Catalog data loaded:', catalogData.length, 'items');
+	
+		if ($('.search-box-outer').length) {
+			$('.search-box-outer').on('click', function () {
+				console.log("Search box opened");
+				$('body').addClass('search-active');
+			});
+			
+			$('.close-search').on('click', function() {
+				console.log("Search box closed");
+				$('body').removeClass('search-active');
+			});
+	
+			// Fungsi debounce untuk mengoptimalkan pencarian
+			function debounce(func, wait) {
+				var timeout;
+				return function() {
+					var context = this, args = arguments;
+					clearTimeout(timeout);
+					timeout = setTimeout(function() {
+						func.apply(context, args);
+					}, wait);
+				};
+			}
+	
+			// Fungsi pencarian yang sebenarnya
+			function performSearch() {
+				var searchQuery = $('#search-input').val().toLowerCase().trim();
+				console.log('Searching for:', searchQuery);
+	
+				if (searchQuery.length === 0) {
+					$('#search-suggestions').hide();
+					return;
+				}
+	
+				try {
+					var suggestions = catalogData.filter(function(item) {
+						return item.title.toLowerCase().startsWith(searchQuery);
+					});
+	
+					console.log('Found', suggestions.length, 'suggestions');
+	
+					if (suggestions.length > 0) {
+						var suggestionHtml = '<ul>';
+						suggestions.forEach(function(item) {
+							suggestionHtml += `
+							<li>
+								<a href="${eventDetailUrl}?id=${item.id}">
+									<div class="event-block_ones">
+										<div class="event-block_one-contents">
+											<h4 style="margin-left: 20px">${item.title}</h4>
+											<p style="margin-left: 20px">${item.desc}</p>
+										</div>
+									</div>
+								</a>
+							</li>`;
+						});
+						suggestionHtml += '</ul>';
+						$('#search-suggestions').html(suggestionHtml).show();
+					} else {
+						$('#search-suggestions').html('<p style="background-color: #000000 ; padding: 20px">Tidak ada hasil yang ditemukan.</p>').show();
+					}
+				} catch (error) {
+					console.error('Error during search:', error);
+					$('#search-suggestions').html('<p>Terjadi kesalahan saat mencari.</p>').show();
+				}
+			}
+	
+			// Gunakan debounce pada event input
+			$('#search-input').on('input', debounce(performSearch, 300));
+		}
+	});
+
+// 	// Header Search functionality
+// 	if ($('.search-box-outer').length) {
+// 		$('.search-box-outer').on('click', function () {
+// 			openSearch();
+// 		});
+// 	}
+
+// 	function openSearch() {
+// 		if (!$('body').hasClass('search-active')) {
+// 			$('body').addClass('search-active');
+
+// 			// Tampilkan input pencarian, tombol close, dan div untuk saran pencarian
+// 			$('body').append(`
+// 				<div class="search-overlay">
+// 					<div class="search-container">
+// 						<input type="text" id="search-input" class="form-control" placeholder="Cari...">
+// 						<button class="close-search">&times;</button>
+// 					</div>
+// 					<div id="search-suggestions" class="suggestions-box"></div>
+// 				</div>
+// 			`);
+
+
+// 			// Fungsi tombol close
+// 			$('.close-search').on('click', function () {
+// 				closeSearch();
+// 			});
+
+// 			// Menampilkan rekomendasi pencarian saat mengetik
+// 			$('#search-input').on('input', function () {
+// 				let searchQuery = $(this).val().toLowerCase();
+
+// 				if (searchQuery.length > 0) {
+// 					// Contoh rekomendasi dummy, bisa diganti dengan data dari server
+// 					let suggestions = ['Popopol', 'Popomaru', 'Popcorn', 'Popaye', 'Popcat'];
+
+// 					// Filter saran berdasarkan input pencarian
+// 					let filteredSuggestions = suggestions.filter(function (item) {
+// 						return item.toLowerCase().includes(searchQuery);
+// 					});
+
+// 					// Membuat elemen HTML untuk saran
+// 					let suggestionHtml = '<ul>';
+// 					filteredSuggestions.forEach(function (item) {
+// 						suggestionHtml += '<li>' + item + '</li>';
+// 					});
+// 					suggestionHtml += '</ul>';
+
+// 					// Menampilkan hasil saran dalam elemen saran pencarian
+// 					$('#search-suggestions').html(suggestionHtml).show();
+// 				} else {
+// 					$('#search-suggestions').hide();
+// 				}
+// 			});
+
+// 			// Tutup pencarian saat mengklik di luar area pencarian
+// 			$(document).on('click', function (event) {
+// 				if (!$(event.target).closest('.search-overlay').length && !$(event.target).closest('.search-box-outer').length) {
+// 					closeSearch();
+// 				}
+// 			});
+// 		}
+// 	}
+
+// 	// Fungsi untuk menutup pencarian
+// 	function closeSearch() {
+// 		$('body').removeClass('search-active');
+// 		$('.search-overlay').remove();
+// 	}
+
+
+// Header Search functionality
+// if ($('.search-box-outer').length) {
+//     $('.search-box-outer').on('click', function () {
+//         $('body').addClass('search-active');
+
+//         // Tampilkan input pencarian, tombol close, dan div untuk saran pencarian
+//         $('body').append(`
+//             <div class="search-overlay">
+//                 <div class="search-container">
+//                     <input type="text" id="search-input" class="form-control" placeholder="Cari...">
+                    
+//                 </div>
+				
+//                 <div id="search-suggestions" class="suggestions-box"></div>
+//             </div>
+//         `);
+// 		console.log("Elemen search overlay dan close-search ditambahkan ke DOM");
+
+//         // Fungsi tombol close
+//         $(document).on('click', '.close-search', function (event) {
+// 			event.preventDefault(); // Ini memastikan tidak ada event lain yang mengganggu
+// 			event.stopPropagation(); // Hentikan bubbling jika ada
+// 			console.log("Tombol close-search diklik");
+// 			closeSearch();
+// 		});
+
+//         // Menampilkan rekomendasi pencarian saat mengetik
+//         $('#search-input').on('input', function () {
+//             let searchQuery = $(this).val().toLowerCase();
+
+//             if (searchQuery.length > 0) {
+//                 // Contoh rekomendasi dummy, bisa diganti dengan data dari server
+//                 let suggestions = ['Popopol', 'Popomaru', 'Popcorn', 'Popaye', 'Popcat'];
+
+//                 // Filter saran berdasarkan input pencarian
+//                 let filteredSuggestions = suggestions.filter(function (item) {
+//                     return item.toLowerCase().includes(searchQuery);
+//                 });
+
+//                 // Membuat elemen HTML untuk saran
+//                 let suggestionHtml = '<ul>';
+//                 filteredSuggestions.forEach(function (item) {
+//                     suggestionHtml += '<li>' + item + '</li>';
+//                 });
+//                 suggestionHtml += '</ul>';
+
+//                 // Menampilkan hasil saran dalam elemen saran pencarian
+//                 $('#search-suggestions').html(suggestionHtml).show();
+//             } else {
+//                 $('#search-suggestions').hide();
+//             }
+//         });
+
+        // Tutup pencarian saat mengklik di luar area pencarian
+        // $(document).on('click', function (event) {
+        //     if (!$(event.target).closest('.search-overlay').length && !$(event.target).closest('.search-box-outer').length) {
+        //         closeSearch();
+        //     }
+        // });
+//     });
+// }
+
+// Fungsi untuk menutup pencarian
+// function closeSearch() {
+// 	console.log("Fungsi closeSearch() dipanggil");
+//     $('body').removeClass('search-active');
+//     console.log("Class 'search-active' dihapus dari body");
+//     $('.search-overlay').remove();
+//     console.log("Elemen .search-overlay dihapus");
+//     $('.search-box-outer').remove();
+//     console.log("Elemen .search-box-outer dihapus");
+// } 
 
 
 	// LightBox Image

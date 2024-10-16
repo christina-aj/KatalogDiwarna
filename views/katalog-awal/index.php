@@ -329,7 +329,7 @@ use yii\bootstrap5\Html;
     </section>
 	
 	<!-- Search Popup -->
-	<div class="search-popup">
+	<!-- <div class="search-popup">
 		<div class="color-layer"></div>
 		<button class="close-search"><span class="flaticon-close-1"></span></button>
 		<form method="post" action="blog.html">
@@ -338,7 +338,7 @@ use yii\bootstrap5\Html;
 				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
 			</div>
 		</form>
-	</div>
+	</div> -->
 	<!-- End Search Popup -->
 	
 	<!-- Sidebar Cart Item -->

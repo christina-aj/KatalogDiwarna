@@ -142,19 +142,6 @@
 	</section>
 	<!-- End Map One -->
 	
-	<!-- Search Popup -->
-	<div class="search-popup">
-		<div class="color-layer"></div>
-		<button class="close-search"><span class="flaticon-close-1"></span></button>
-		<form method="post" action="blog.html">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-			</div>
-		</form>
-	</div>
-	<!-- End Search Popup -->
-	
 	<!-- Sidebar Cart Item -->
 	<div class="xs-sidebar-group info-group">
 		<div class="xs-overlay xs-bg-black"></div>
@@ -311,7 +298,6 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/ScrollToPlugin.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/ScrollSmoother.min.js"></script>
 
-<script src="<?= Yii::getAlias('@web') ?>/assets/js/magnific-popup.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.meanmenu.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/nav-tool.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery-ui.js"></script>

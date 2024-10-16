@@ -325,18 +325,7 @@ $this->title = 'Homepage';
 	</section>
 	<!-- End Newsletter One -->
 	
-	<!-- Search Popup -->
-	<div class="search-popup">
-		<div class="color-layer"></div>
-		<button class="close-search"><span class="flaticon-close-1"></span></button>
-		<form method="post" action="blog.html">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-			</div>
-		</form>
-	</div>
-	<!-- End Search Popup -->
+	
 </div>
 <!-- End PageWrapper -->
 
@@ -345,6 +334,7 @@ $this->title = 'Homepage';
 		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
 	</svg>
 </div>
+
 
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/popper.min.js"></script>
@@ -373,99 +363,7 @@ $this->title = 'Homepage';
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-<script>
-	$(document).ready(function(){
-    // Select all links with hashes
-    $('a[href^="#"]').on('click', function(event) {
-        event.preventDefault();
-
-        var target = this.hash;
-        var $target = $(target);
-
-        $('html, body').animate({
-            scrollTop: $target.offset().top
-        }, 1000, function(){
-            window.location.hash = target;
-        });
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // console.log('DOM siap!');
-
-    const buttons = document.querySelectorAll('.btn-category');
-    const slides = document.querySelectorAll('.three-items_slider .swiper-slide');
-    
-    // Inisialisasi Swiper
-    const swiper = new Swiper('.three-items_slider', {
-        pagination: {
-            el: '.three-items_slider-pagination',
-            clickable: true,
-        },
-        slidesPerView: 3,
-        spaceBetween: 10,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        speed: 600,
-        effect: 'slide',
-    });
-    // console.log('Swiper diinisialisasi');
-
-    // Event listener untuk setiap tombol kategori
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const kategori = button.getAttribute('data-kategori');
-            // console.log('Tombol diklik:', kategori);
-
-            // Menghapus kelas 'active' dari semua tombol dan menambahkannya ke tombol yang diklik
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            // console.log('Kelas active ditambahkan ke tombol:', button);
-
-            // Menampilkan banner dan galeri
-            const sliderContent = document.querySelector('.slider-one_content');
-            const vlogOne = document.querySelector('.vlog-one');
-
-            if (sliderContent) {
-                sliderContent.style.display = 'block';
-                // console.log('Slider One Content Ditampilkan');
-            } else {
-                // console.log('Slider One Content Tidak Ditemukan');
-            }
-
-            if (vlogOne) {
-                vlogOne.style.display = 'block';
-                // console.log('Vlog One Ditampilkan');
-            } else {
-                // console.log('Vlog One Tidak Ditemukan');
-            }
-
-            // Reset semua slide menjadi tidak terlihat terlebih dahulu
-            // console.log('Slides yang dipilih:', slides);
-            slides.forEach(slide => {
-                // console.log('Memproses slide:', slide);
-                slide.style.display = 'none'; // Sembunyikan semua slide
-            });
-
-            // Tampilkan slide yang sesuai dengan kategori
-            slides.forEach(slide => {
-                if (kategori === 'all' || slide.getAttribute('data-kategori') === kategori) {
-                    slide.style.display = 'block'; // Tampilkan slide yang sesuai
-                }
-            });
-
-            // Update Swiper setelah mengubah slide
-            swiper.update(); // Pastikan Swiper diperbarui setelah mengubah tampilan slide
-        });
-    });
-});
-</script>
+<script src="<?= Yii::getAlias('@web') ?>/assets/js/katalogcat.js"></script>
 
 
 <?php $this->endBody() ?>

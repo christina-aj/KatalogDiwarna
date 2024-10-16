@@ -7,13 +7,20 @@ use app\assets\AppAsset;
 use app\widgets\Alert;
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
+use app\models\KatalogAwal; 
 
 $HomeDiwarnas = Url::to(['site/index']);
 $AboutDiwarnas = Url::to(['site/about-diwarna']);
 $ContactDiwarnas = Url::to(['site/contact-diwarna']);
 $FAQ = Url::to(['site/index#faq']);
 $Produk = Url::to(['site/index#produk-kami']);
+$eventDetailUrl = Url::to(['site/event-detail']);
 
+$this->beginBlock('katalog_awal_data');
+	$katalog_awal = KatalogAwal::find()
+		->joinWith('subKategori.kategori')
+		->where(['kategori.status' => 1])
+		->all();
 ?>
 
 <?php $this->beginPage() ?>
@@ -105,9 +112,9 @@ $Produk = Url::to(['site/index#produk-kami']);
 							<!-- Header Options Box -->
 							<div class="header-options_box d-flex align-items-center">
 								<!-- Search Btn -->
-								<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>						
+								<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>		
+									
 							</div>
-							<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
 						</div>
 						<!-- End Outer Box -->
                     </div>
@@ -133,6 +140,34 @@ $Produk = Url::to(['site/index#produk-kami']);
             <?= $content ?>
         </div>
     </main>
+	
+	<!-- Search Popup -->
+	<div class="search-popup">
+		<div class="color-layer"></div>
+		<button class="close-search"><span class="flaticon-close-1"></span></button>
+		<form method="post" action="blog.html">
+			<div class="form-group">
+				<input type="search" id="search-input" value="" placeholder="Search Here" required="">
+				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+			</div>
+			<!-- Tempat untuk menampilkan rekomendasi pencarian -->
+			<div id="search-suggestions" class="suggestions-box"></div>
+			<!-- <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div> -->
+		</form>
+		
+	</div>
+	<!-- End Search Popup -->
+
+	<div id="hidden-catalog-data" style="display: none;">
+		<?php foreach ($katalog_awal as $kat): ?>
+		<div class="catalog-item" 
+			data-id="<?= $kat->katalog_awal_id ?>"
+			data-title="<?= htmlspecialchars($kat->text_k_awal) ?>"
+			data-desc="<?= htmlspecialchars($kat->desc_k_awal) ?>"
+			data-url="<?= htmlspecialchars($kat->url_k_awal) ?>">
+		</div>
+		<?php endforeach; ?>
+	</div>
 
 	<!-- Main Footer -->
 	<footer class="main-footer">
