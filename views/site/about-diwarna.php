@@ -108,32 +108,33 @@ $this->title = 'Homepage';
 							<div class="sec-title_title" style="font-size: 15px;"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> CV DIGITAL WARNA MANDIRI</div>
 							<h2 class="sec-title_heading" style="font-size: 70px;">VISI & MISI</h2>
 						</div>
+					</div>
+				</div>
+
 				<div class="testimonial-three_carousel-column col-lg-8 col-md-12 col-sm-12">
 					<div class="testimonial-three_carousel-outer">
 						<div class="two-items_slider" style="display: flex; gap: 20px;">
-								<!-- Visi Misi -->
-									<div class="testimonial-block_three" style="flex: 1; display: flex;">
-										<div class="testimonial-block_three-inner" style="flex: 1;">
-											<div class="testimonial-block_three-text" style="font-size: 20px;">Menciptakan ekosistem one-stop order untuk segala atribut dan kelengkapan sekolah</div>
-											<div class="testimonial-block_two-name">
-												<strong style="font-size: 35px;">VISI</strong>
-											</div>
-										</div>
+							<!-- Visi Misi -->
+							<div class="testimonial-block_three" style="flex: 1; display: flex;">
+								<div class="testimonial-block_three-inner" style="flex: 1;">
+									<div class="testimonial-block_three-text" style="font-size: 20px;">Menciptakan ekosistem one-stop order untuk segala atribut dan kelengkapan sekolah</div>
+									<div class="testimonial-block_two-name">
+										<strong style="font-size: 35px;">VISI</strong>
 									</div>
+								</div>
+							</div>
 
-									<div class="testimonial-block_three" style="flex: 1; display: flex;">
-										<div class="testimonial-block_three-inner" style="flex: 1;">
-											<div class="testimonial-block_three-text" style="font-size: 20px;">Memberikan kemudahan akses dan transparansi order bagi kustomer serta memberikan solusi produk atribut dengan tepat</div>
-											<div class="testimonial-block_two-name">
-												<strong style="font-size: 35px;">MISI</strong>
-											</div>
-										</div>
+							<div class="testimonial-block_three" style="flex: 1; display: flex;">
+								<div class="testimonial-block_three-inner" style="flex: 1;">
+									<div class="testimonial-block_three-text" style="font-size: 20px;">Memberikan kemudahan akses dan transparansi order bagi kustomer serta memberikan solusi produk atribut dengan tepat</div>
+									<div class="testimonial-block_two-name">
+										<strong style="font-size: 35px;">MISI</strong>
 									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</section>
