@@ -3743,6 +3743,14 @@
 	margin-bottom:0px;
 }
 
+.contact-form .button-container {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-evenly;
+    width: 100%;
+    gap: 15px;
+}
+
 .contact-form .form-group input[type="text"],
 .contact-form .form-group input[type="password"],
 .contact-form .form-group input[type="tel"],

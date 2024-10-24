@@ -294,38 +294,6 @@ $this->title = 'Homepage';
 	</section>
 	<!-- End Faq One -->
 	
-	<!-- Newsletter One -->
-	<section class="newsletter-one">
-		<div class="auto-container">
-			<div class="inner-container">
-				<div class="newsletter-one_pattern" style="background-image: url(assets/images/background/pattern-3.png)"></div>
-				<div class="row clearfix">
-					<!-- Column -->
-					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<h2 class="newsletter-one_heading">Subscribe To My Newsletter for latest Updates</h2>
-					</div>
-					<!-- Column -->
-					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<div class="newsletter-box">
-							<form method="post" action="contact.html">
-								<div class="form-group">
-									<span class="icon flaticon-mail"></span>
-									<input type="email" name="search-field" value="" placeholder="Your Email" required>
-									<button type="submit" class="theme-btn submit-btn">
-										Subscribe Now <i class="flaticon-bell"></i>
-									</button>
-								</div>
-							</form>
-						</div>
-						<div class="newsletter-one_span">*We Never Span</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Newsletter One -->
-	
-	
 </div>
 <!-- End PageWrapper -->
 
@@ -362,11 +330,15 @@ $this->title = 'Homepage';
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/katalogcat.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 
 <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage(); ?>
 

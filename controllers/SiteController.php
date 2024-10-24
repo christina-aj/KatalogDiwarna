@@ -13,6 +13,7 @@ use app\models\KatalogAwal;
 use app\models\FotoProduk;
 use app\models\Kategori;
 use app\models\FotoSlide;
+use app\models\Testimonial;
 
 class SiteController extends Controller
 {
@@ -177,9 +178,11 @@ class SiteController extends Controller
     public function actionAboutDiwarna()
     {
         $foto_produk = FotoProduk::find()->all();
+        $testimonial = Testimonial::find()->all();
 
         return $this->render('about-diwarna', [
             'foto_produk' => $foto_produk,
+            'testimonial' => $testimonial,
         ]);
     }
 }

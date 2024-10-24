@@ -226,7 +226,7 @@ use yii\bootstrap5\Html;
 			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 			
 			<nav class="menu-box">
-				<div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/footer-diwarna_logo.png" alt="" title=""></a></div>
+				<div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna_logo.png" alt="" title=""></a></div>
 				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 			</nav>
 		</div>

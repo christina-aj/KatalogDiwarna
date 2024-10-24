@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->title = 'Homepage'; 
 ?>
 
-
+<?php $this->beginPage() ?>
 <?php $this->beginBody() ?>
 <body>
 <div class="page-wrapper">
@@ -108,23 +108,9 @@ $this->title = 'Homepage';
 							<div class="sec-title_title" style="font-size: 15px;"><i><img src="<?= Yii::getAlias('@web') ?>/assets/images/main-slider/grid.svg" alt="" /></i> CV DIGITAL WARNA MANDIRI</div>
 							<h2 class="sec-title_heading" style="font-size: 70px;">VISI & MISI</h2>
 						</div>
-						
-						<!-- If we need navigation buttons -->
-						<!-- <div class="testimonial-three_navs">
-							<div class="two-items_slider-button-prev fas fa-angle-left fa-fw"></div>
-							<div class="two-items_slider-button-next fas fa-angle-right fa-fw"></div>
-						</div> -->
-					</div>
-				</div>
-				<!-- Carousel Column -->
-				<!-- <div class="testimonial-three_carousel-column col-lg-8 col-md-12 col-sm-12">
-					<div class="testimonial-three_carousel-outer">
-						<div class="two-items_slider swiper-container">
-							<div class="swiper-wrapper"> -->
 				<div class="testimonial-three_carousel-column col-lg-8 col-md-12 col-sm-12">
 					<div class="testimonial-three_carousel-outer">
 						<div class="two-items_slider" style="display: flex; gap: 20px;">
-
 								<!-- Visi Misi -->
 									<div class="testimonial-block_three" style="flex: 1; display: flex;">
 										<div class="testimonial-block_three-inner" style="flex: 1;">
@@ -180,44 +166,26 @@ $this->title = 'Homepage';
 							<div class="swiper-wrapper">
 
 								<!-- Slide -->
+								<?php foreach ($testimonial as $testi): ?>
 								<div class="swiper-slide">
 									<!-- Testimonial Block Two -->
 									<div class="testimonial-block_three">
 										<div class="testimonial-block_three-inner">
 											<div class="testimonial-block_three-author">
 												<div class="testimonial-block_three-image">
-													<img src="assets/images/resource/author-4.png" alt="" />
+													<!-- <img src="assets/images/resource/author-4.png" alt="" /> -->
 												</div>
 												<i class="flaticon-quote"></i>
 											</div>
-											<div class="testimonial-block_three-text">Terimakasih Kak barang telah kami terima dengan selamat dan baik keren pokoknya keren temen2 yg lain yang ingin order, gak perlu ragu hasil memuaskan pelayanan baik. pokoke mantep lah</div>
+											<div class="testimonial-block_three-text"><?= $testi->desc_testi?></div>
 											<div class="testimonial-block_two-name">
-												<strong>Jack</strong>
-												Cetak Badge
+												<strong><?= $testi->nama_testi?></strong>
+												<?= $testi->note_testi?>
 											</div>
 										</div>
 									</div>
 								</div>
-								
-								<!-- Slide -->
-								<div class="swiper-slide">
-									<!-- Testimonial Block Two -->
-									<div class="testimonial-block_three">
-										<div class="testimonial-block_three-inner">
-											<div class="testimonial-block_three-author">
-												<div class="testimonial-block_three-image">
-													<img src="assets/images/resource/author-5.png" alt="" />
-												</div>
-												<i class="flaticon-quote"></i>
-											</div>
-											<div class="testimonial-block_three-text">Hasilnya sangat rapi dan mantep, keren dan ngga meleset dari request. Yang mau order gas aja deh dijamin cakepp hasilnya. Pelayanan ramah walau banyak request haha</div>
-											<div class="testimonial-block_two-name">
-												<strong>Merlin</strong>
-												Kaus Kaki Bordir
-											</div>
-										</div>
-									</div>
-								</div>
+								<?php endforeach; ?>
 							</div>
 						</div>
 					</div>
@@ -381,141 +349,6 @@ $this->title = 'Homepage';
 		</div>
 	</section>
 	<!-- End Gallery One -->
-	
-	<!-- Sidebar Cart Item -->
-	<div class="xs-sidebar-group info-group">
-		<div class="xs-overlay xs-bg-black"></div>
-		<div class="xs-sidebar-widget">
-			<div class="sidebar-widget-container">
-				<div class="close-button">
-					<span class="fa-solid fa-xmark fa-fw"></span>
-				</div>
-				<div class="sidebar-textwidget">
-					
-					<!-- Sidebar Info Content -->
-					<div class="sidebar-info-contents">
-						<div class="content-inner">
-						
-							<!-- Title Box -->
-							<div class="title-box">
-								<h5>Vroom <span>Bikers</span></h5>
-								<div class="price">$15 from free economy shipping</div>
-							</div>
-							
-							<!-- Empty Cart Box -->
-							<div class="empty-cart-box">
-								<!-- No Product -->
-								<div class="no-cart">
-									<span class="icon fa-solid fa-cart-flatbed-suitcase fa-fw"></span>
-									No products in cart.
-								</div>
-							</div>
-							
-							<!-- Lower Box -->
-							<div class="lower-box">
-								<h5>Popular <span>Suggestions</span></h5>
-									
-								<!-- Post Block -->
-								<div class="post-block">
-									<div class="inner-box">
-										<div class="image">
-											<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-1.jpg" alt="" />
-										</div>
-										<h6><a href="#">Motorcycle Rallies</a></h6>
-										<div class="rating">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<div class="price-box">$125</div>
-										<a class="theme-btn bag-btn" href="#">add to bag</a>
-									</div>
-								</div>
-								
-								<!-- Post Block -->
-								<div class="post-block">
-									<div class="inner-box">
-										<div class="image">
-											<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-2.jpg" alt="" />
-										</div>
-										<h6><a href="#">Adventure Tours</a></h6>
-										<div class="rating">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<div class="price-box">$205</div>
-										<a class="theme-btn bag-btn" href="#">add to bag</a>
-									</div>
-								</div>
-								
-								<!-- Post Block -->
-								<div class="post-block">
-									<div class="inner-box">
-										<div class="image">
-											<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/post-thumb-3.jpg" alt="" />
-										</div>
-										<h6><a href="#">Group Rides</a></h6>
-										<div class="rating">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-										<div class="price-box">$25</div>
-										<a class="theme-btn bag-btn" href="#">add to bag</a>
-									</div>
-								</div>
-								
-							</div>
-							
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- About Sidebar -->
-	<div class="about-sidebar">
-		<div class="gradient-layer"></div>
-		<!-- Close Button -->
-		<div class="close-sidebar-widget close-button">
-			<span class="fa-solid fa-xmark fa-fw"></span>
-		</div>
-		<div class="sidebar-inner">
-			<div class="upper-box">
-				<div class="image">
-					<img src="<?= Yii::getAlias('@web') ?>/assets/images/resource/about.jpg" alt="" />
-				</div>
-				<div class="content-box">
-					<h3>About <span>vroom</span></h3>
-					<div class="text">From scenic rides to thrilling encounters, our videos showcase the beauty and camaraderie of motorcycling. Whether  an experienced rider or a curious newcomer, there's something for everyone to enjoy in our content of moto vloggers.</div>
-					<ul class="about-one_list">
-						<li>Motorcycle Rallies</li>
-						<li>Adventure Tours</li>
-						<li>Group Rides</li>
-						<li>Road Warrior</li>
-					</ul>
-				</div>
-			</div>
-			<!-- Social Box -->
-			<div class="social-box">
-				<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-				<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-				<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-			</div>
-		</div>
-	</div>
-	<!-- End About Sidebar -->
-	
 </div>
 <!-- End PageWrapper -->
 
@@ -550,8 +383,11 @@ $this->title = 'Homepage';
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 
 <?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage(); ?>

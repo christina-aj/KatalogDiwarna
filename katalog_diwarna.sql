@@ -23,27 +23,27 @@ USE `katalog_diwarna`;
 CREATE TABLE IF NOT EXISTS `detail_produk` (
   `id_detail_p` int NOT NULL AUTO_INCREMENT,
   `katalog_awal_id` int NOT NULL,
-  `deskripsi_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `deskripsi_detail_p` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `list_desk_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `penutup_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `penutup_detail_p` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `linkwa_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '#',
   PRIMARY KEY (`id_detail_p`) USING BTREE,
   KEY `katalog_awal_id` (`katalog_awal_id`),
   CONSTRAINT `fk-katalog_awal_id` FOREIGN KEY (`katalog_awal_id`) REFERENCES `katalog_awal` (`katalog_awal_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table katalog_diwarna.detail_produk: ~0 rows (approximately)
+-- Dumping data for table katalog_diwarna.detail_produk: ~9 rows (approximately)
 DELETE FROM `detail_produk`;
 INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `list_desk_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
-	(1, 1, 'badgebadegejajdjadad', 'testttt', 'blbablallba', 'https://wa.me/6285731710407?text=tess'),
-	(2, 2, NULL, NULL, NULL, '#'),
-	(3, 3, NULL, NULL, NULL, '#'),
-	(4, 4, NULL, NULL, NULL, '#'),
-	(5, 5, NULL, NULL, NULL, '#'),
-	(6, 6, NULL, NULL, NULL, '#'),
-	(7, 7, NULL, NULL, NULL, '#'),
-	(8, 8, NULL, NULL, NULL, '#'),
-	(9, 9, NULL, NULL, NULL, '#');
+	(1, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', 'https://wa.me/6285731710407?text=tess'),
+	(2, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(3, 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(4, 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(5, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(6, 6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(7, 7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(8, 8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
+	(9, 9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#');
 
 -- Dumping structure for table katalog_diwarna.foto_produk
 CREATE TABLE IF NOT EXISTS `foto_produk` (
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `foto_produk` (
   PRIMARY KEY (`id_foto_produk`)
 ) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table katalog_diwarna.foto_produk: ~7 rows (approximately)
+-- Dumping data for table katalog_diwarna.foto_produk: ~8 rows (approximately)
 DELETE FROM `foto_produk`;
 INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produk`, `desc_foto_produk`, `url_foto_produk`) VALUES
 	(1, 'KAOS KAKI TEMBOK DUKUH', 'KAOS KAKI', 'SDN TEMBOK DUKUH', '/assets/images/produk/1-SDN-TEMBOK-DUKUH.png'),
@@ -108,7 +108,7 @@ INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `des
 	(6, 'dasi-sekolah', 'Dasi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/dasi sekolah - diwarna.com.jpg', 4, 'dasi-sekolah'),
 	(7, 'sabuk-sekolah', 'Sabuk Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/sabuk sekolah - diwarna.com.jpg', 3, 'sabuk-sekolah'),
 	(8, 'evolet-sekolah', 'Evolet Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/evolet sekolah - diwarna.com.jpg', 19, 'evolet-sekolah'),
-	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'Murah, Bahan Berkualitas', '/assets//images/thumbs/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
+	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets//images/thumbs/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
 
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
@@ -161,6 +161,21 @@ INSERT INTO `sub_kategori` (`id_sub_kategori`, `nama_sub_kategori`, `id_kategori
 	(17, 'Foto', 5, 'foto'),
 	(18, 'Kaos Kaki', 1, 'kaos-kaki'),
 	(19, 'Evolet Pundak', 2, 'evolet-pundak');
+
+-- Dumping structure for table katalog_diwarna.testimonial
+CREATE TABLE IF NOT EXISTS `testimonial` (
+  `id_testi` int NOT NULL AUTO_INCREMENT,
+  `nama_testi` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  `note_testi` varchar(255) COLLATE armscii8_bin NOT NULL,
+  `desc_testi` longtext CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  PRIMARY KEY (`id_testi`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+
+-- Dumping data for table katalog_diwarna.testimonial: ~2 rows (approximately)
+DELETE FROM `testimonial`;
+INSERT INTO `testimonial` (`id_testi`, `nama_testi`, `note_testi`, `desc_testi`) VALUES
+	(1, 'Jack', 'Cetak Badge', 'Terimakasih Kak barang telah kami terima dengan selamat dan baik keren pokoknya keren temen2 yg lain yang ingin order, gak perlu ragu hasil memuaskan pelayanan baik. pokoke mantep lah'),
+	(2, 'Marlin\r\n', 'Kaus Kaki', 'Hasilnya sangat rapi dan mantep, keren dan ngga meleset dari request. Yang mau order gas aja deh dijamin cakepp hasilnya. Pelayanan ramah walau banyak request haha');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -16,6 +16,7 @@ $FAQ = Url::to(['site/index#faq']);
 $Produk = Url::to(['site/index#produk-kami']);
 $eventDetailUrl = Url::to(['site/event-detail']);
 
+
 $this->beginBlock('katalog_awal_data');
 	$katalog_awal = KatalogAwal::find()
 		->joinWith('subKategori.kategori')
@@ -50,6 +51,8 @@ $this->beginBlock('katalog_awal_data');
 
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
 
     <?php $this->head() ?>
 </head>
@@ -128,7 +131,7 @@ $this->beginBlock('katalog_awal_data');
 			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 			
 			<nav class="menu-box">
-				<div class="nav-logo"><a href="index.html"><img src="assets/images/footer-diwarna_logo.png" alt="" title=""></a></div>
+				<div class="nav-logo"><a href="index.html"><img src="assets/images/diwarna_logo.png" alt="" title=""></a></div>
 				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 			</nav>
 		</div>
@@ -231,7 +234,7 @@ $this->beginBlock('katalog_awal_data');
 
 							<div class="footer_column col-lg-6 col-md-6 col-sm-12">
 								<div class="footer-widget links-widget">
-									<h5 class="footer-title">Pengujung</h5>
+									<h5 class="footer-title">Pengunjung</h5>
 									<ul class="footer-list">
 									<!-- <a href="https://info.flagcounter.com/3CFK"><img src="https://s11.flagcounter.com/count2/3CFK/bg_EEEEEE/txt_474747/border_EEEEEE/columns_2/maxflags_8/viewers_3/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0"></a> -->
 									<a href=#><img src="https://s11.flagcounter.com/count2/3CFK/bg_EEEEEE/txt_474747/border_EEEEEE/columns_2/maxflags_8/viewers_3/labels_1/pageviews_1/flags_0/percent_1/" alt="Flag Counter" border="0"></a>
@@ -271,12 +274,12 @@ $this->beginBlock('katalog_awal_data');
 						<!-- Column -->
 						<div class="column col-lg-4 col-md-4 col-sm-6">
 							<div class="title">Telepon</div>
-							<a href="tel:+56-955-525-285">0812-1725-7108</a>
+							<a href="tel:+6281217257108">0812-1725-7108</a>
 						</div>
 						<!-- Column -->
 						<div class="column col-lg-4 col-md-4 col-sm-6">
 							<div class="title">Email</div>
-							<a href="mailto:hello-bikers@vroom.com">info@diwarna.com</a>
+							<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMrlxjpnfDMJDffJkmvLFQGKcqkSdrHDhPGjpWKHpWbmkQhgzVpLHGsTzWQRHBbkrgQGHNQ">info@diwarna.com</a>
 						</div>
 						<!-- Column -->
 						<div class="column col-lg-4 col-md-4 col-sm-6">
@@ -312,8 +315,10 @@ $this->beginBlock('katalog_awal_data');
 	</footer>
 	<!-- End Main Footer -->
 	<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    <?php $this->endBody() ?>
+
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

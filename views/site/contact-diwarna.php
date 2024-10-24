@@ -80,51 +80,34 @@
 				<div class="column col-lg-5 col-md-12 col-sm-12">
 					<!-- Sec Title -->
 					<div class="sec-title">
-						<div class="sec-title_title">Contact Me</div>
-						<h2 class="sec-title_heading">Contact with me for Best assistance Now!</h2>
+						<div class="sec-title_title">HUBUNGI DIWARNA</div>
+						<h2 class="sec-title_heading">Hubungi kami untuk info lebih lanjut!</h2>
 					</div>
 					<!-- Social Box -->
 					<div class="contact-social_box">
-						<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-						<a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-						<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+						<a href="https://www.facebook.com/diwarnaID/"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="https://twitter.com/diwarnaID/"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.instagram.com/diwarna/"><i class="fa-brands fa-instagram"></i></a>
 					</div>
 				</div>
 				<!-- Column -->
 				<div class="column col-lg-7 col-md-12 col-sm-12">
 					<div class="contact-form">
-						<h3 class="contact-one_form-title">Get in Touch...</h3>
-						<form method="post" action="sendemail.php" id="contact-form">
-							<div class="row clearfix">
-								<!--Form Group-->
-								<div class="form-group col-lg-6 col-md-6 col-sm-6">
-									<input type="text" name="name" value="" placeholder="Name" required>
-								</div>
-								<!--Form Group-->
-								<div class="form-group col-lg-6 col-md-6 col-sm-6">
-									<input type="email" name="email" value="" placeholder="Email" required>
-								</div>
-								<div class="form-group col-lg-6 col-md-6 col-sm-6">
-									<input type="text" name="phone" value="" placeholder="Phone" required>
-								</div>
-								<div class="form-group col-lg-6 col-md-6 col-sm-6">
-									<input type="text" name="subject" value="" placeholder="Subject" required>
-								</div>
-								<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-									<textarea class="" name="message" placeholder="Type comment here*"></textarea>
-								</div>
-								<div class="form-group col-lg-12 col-md-12 col-sm-12">
-									<button type="button" class="template-btn btn-style-one">
-										<span class="btn-wrap">
-											<span class="text-one">Submit Now <i class="flaticon-next"></i></span>
-											<span class="text-two">Submit Now <i class="flaticon-next"></i></span>
-										</span>
-									</button>
-								</div>
-								
-							</div>
-						</form>
+						<h3 class="contact-one_form-title">Kirim Pesan Melalui...</h3>
+						<div class="button-container">
+							<a href="https://wa.me/6285731710407?text=Halo%20saya%20mau%20tanya" class="template-btn btn-style-one" style="flex:1">
+								<span class="btn-wrap">
+									<span class="text-one">Chat WhatsApp <i class="flaticon-next"></i></span>
+									<span class="text-two">Chat WhatsApp <i class="flaticon-next"></i></span>
+								</span>
+							</a>
+							<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMrlxjpnfDMJDffJkmvLFQGKcqkSdrHDhPGjpWKHpWbmkQhgzVpLHGsTzWQRHBbkrgQGHNQ" class="template-btn btn-style-one" style="flex:1">
+								<span class="btn-wrap">
+									<span class="text-one">Send Email <i class="flaticon-next"></i></span>
+									<span class="text-two">Send Email <i class="flaticon-next"></i></span>
+								</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -304,6 +287,10 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/validate.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <!-- <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 <?php $this->endBody() ?>
 </body>

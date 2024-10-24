@@ -34,7 +34,7 @@
 			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 			
 			<nav class="menu-box">
-				<!-- <div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/footer-diwarna_logo.png" alt="" title=""></a></div> -->
+				<!-- <div class="nav-logo"><a href="index.html"><img src="<?= Yii::getAlias('@web') ?>/assets/images/diwarna_logo.png" alt="" title=""></a></div> -->
 				<div class="nav-logo"><a href="index.html"><img src="<?= \yii\helpers\Url::to($katalogAwal->url_k_awal) ?>" alt="" title=""></a></div>
 
 
@@ -352,6 +352,10 @@
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/jquery.countdown.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/element-in-view.js"></script>
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 <?php $this->endBody() ?>
 </body>
