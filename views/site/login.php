@@ -10,20 +10,22 @@ use yii\bootstrap5\Html;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
+$this->registerCssFile('@web/css/login.css');
+
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+    <p style= "color: black;">Please fill out the following fields to login:</p>
 
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-12">
 
             <?php $form = ActiveForm::begin([
                 'id' => 'login-form',
                 'fieldConfig' => [
                     'template' => "{label}\n{input}\n{error}",
-                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3'],
+                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3', 'style' => 'color:black'],
                     'inputOptions' => ['class' => 'col-lg-3 form-control'],
                     'errorOptions' => ['class' => 'col-lg-7 invalid-feedback'],
                 ],
@@ -45,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?php ActiveForm::end(); ?>
 
-            <div style="color:#999;">
+            <div style= "color: black;">
                 You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
                 To modify the username/password, please check out the code <code>app\models\User::$users</code>.
             </div>

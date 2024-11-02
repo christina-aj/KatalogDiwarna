@@ -9,6 +9,7 @@ use yii\bootstrap5\Html;
 use yii\helpers\Url;
 use app\models\KatalogAwal; 
 
+$LoginDiwarnas = Url::to(['site/login']);
 $HomeDiwarnas = Url::to(['site/index']);
 $AboutDiwarnas = Url::to(['site/about-diwarna']);
 $ContactDiwarnas = Url::to(['site/contact-diwarna']);
@@ -32,6 +33,7 @@ $this->beginBlock('katalog_awal_data');
     <title>DIWARNA CATALOGUE</title>
     
     <!-- Stylesheets -->
+    
     <link href="<?= Yii::getAlias('@web') ?>/assets/css/bootstrap.css" rel="stylesheet">
     <link href="<?= Yii::getAlias('@web') ?>/assets/css/style.css" rel="stylesheet">
     <link href="<?= Yii::getAlias('@web') ?>/assets/css/meanmenu.min.css" rel="stylesheet">
@@ -116,7 +118,14 @@ $this->beginBlock('katalog_awal_data');
 							<div class="header-options_box d-flex align-items-center">
 								<!-- Search Btn -->
 								<div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>		
-									
+							</div>
+
+							<div class="header-options_box d-flex align-items-center">
+								<!--Login Btn -->
+								<!-- <div class="search-box-btn" onclick="toggleLogin()"><span class="icon fa fa-sign-in"></span></div> -->
+								<!-- <div id="loginBtn" class="search-box-btn"><span class="icon fa fa-sign-in"></span></div> -->
+								<!-- <div class="search-box-btn"><span class="icon fa fa-sign-in"></span></div> -->
+								<a href="<?= $LoginDiwarnas ?>" class="search-box-btn"><span class="icon fa fa-sign-in"></span></a>
 							</div>
 						</div>
 						<!-- End Outer Box -->
@@ -314,8 +323,9 @@ $this->beginBlock('katalog_awal_data');
 		
 	</footer>
 	<!-- End Main Footer -->
-	<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 
 <?php $this->endBody() ?>
