@@ -18,6 +18,8 @@ class FotoProduk extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public $file_foto_produk;
+
     public static function tableName()
     {
         return 'foto_produk';
@@ -30,6 +32,7 @@ class FotoProduk extends \yii\db\ActiveRecord
     {
         return [
             [['alt_foto_produk', 'text_foto_produk', 'desc_foto_produk', 'url_foto_produk'], 'string', 'max' => 250],
+            [['file_foto_produk'], 'file', 'skipOnEmpty' => true, 'extensions' => 'jpg, png, jpeg, webp'],
         ];
     }
 

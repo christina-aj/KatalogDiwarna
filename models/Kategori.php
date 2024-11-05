@@ -28,6 +28,8 @@ class Kategori extends \yii\db\ActiveRecord
     {
         return [
             [['nama_kategori', 'slug'], 'string', 'max' => 255],
+            [['status'], 'integer'], // Pastikan status bertipe integer
+            [['status'], 'required'], // Tambahkan aturan agar status wajib diisi
         ];
     }
 
@@ -40,6 +42,7 @@ class Kategori extends \yii\db\ActiveRecord
             'id_kategori' => 'Id Kategori',
             'nama_kategori' => 'Nama Kategori',
             'slug' => 'Slug',
+            'status' => 'Status',
         ];
     }
 

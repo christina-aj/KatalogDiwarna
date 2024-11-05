@@ -1,5 +1,223 @@
 /* Vroom Biker & Hiker Business HTML-5 Template */
 
+/* FORM CREATE UPDATE CRUD*/
+
+.create-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Reset style yang mungkin mempengaruhi */
+.create-form .btn,
+.create-form a {
+    display: block;
+    width: auto;
+    margin: 0;
+}
+
+/* Container untuk tombol */
+.button-container {
+    display: flex !important; /* !important untuk memastikan style ini digunakan */
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Style untuk kedua tombol */
+.button-container .btn,
+.button-container a {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Warna spesifik untuk masing-masing tombol */
+.button-container .btn-success {
+    background-color: #25daa5;
+    color: white;
+}
+
+.button-container .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .create-form {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+
+
+
+/* VIEW INDEX CRUD*/
+.pc-content {
+    padding: 40px;
+    max-width: 100%;
+}
+
+.grid-view {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.grid-view table {
+    width: 100%;
+    min-width: 800px; /* minimum width untuk desktop */
+}
+
+.grid-view th,
+.grid-view td {
+    padding: 12px 8px;
+    word-wrap: break-word;
+}
+
+.btn-success {
+    display: inline-block; /* Ubah dari block ke inline-block */
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    width: auto; /* Hapus width 100% jika ada */
+    margin-bottom: 20px;
+}
+
+/* Jika masih tidak berpengaruh, tambahkan !important */
+.btn.btn-success {
+    width: auto !important;
+    display: inline-block !important;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .pc-content {
+        padding: 25px;
+    }
+    
+    .grid-view {
+        font-size: 10px;
+    }
+    
+    .grid-view th,
+    .grid-view td {
+        padding: 8px 4px;
+    }
+    
+    /* Membuat input filter lebih besar di mobile */
+    .form-control {
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Untuk layar sangat kecil */
+@media screen and (max-width: 480px) {
+    .grid-view .action-column {
+        min-width: 80px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        padding-bottom: 15px !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* Sembunyikan menu mobile di desktop */
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 767px) {
+	.navbar-toggler {
+		display: block !important; /* tampilkan hanya di mobile */
+		padding: 10px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		z-index: 1000;
+	}
+
+	.navbar-toggler i {
+		font-size: 24px;
+		color: #333;
+	}
+
+	.mobile-nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: white;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		z-index: 999;
+	}
+
+	.mobile-nav.show {
+		display: block !important;
+	}
+
+	.mobile-nav .nav-link {
+		display: block;
+		padding: 15px 20px;
+		color: #333;
+		border-bottom: 1px solid #eee;
+		text-decoration: none;
+	}
+
+	.mobile-nav .nav-link:hover {
+		background: #f8f9fa;
+	}
+}
+
+
+
+/*DEFAULT BAWAAAN*/
+
+@media screen and (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 2000px){
 	
 	
@@ -239,10 +457,12 @@
 	
 }
 
-@media only screen and (min-width: 768px){
-	
-	
-	
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px !important; /* Ukuran untuk mobile */
+        padding-bottom: 15px !important;
+        margin-bottom: 15px;
+    }
 }
 
 

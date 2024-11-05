@@ -10,7 +10,22 @@
 		}
 	}
 	
+	$(document).ready(function() {
+		// Kode event listener untuk tombol hamburger
+		const menuBtn = $('#mobileMenuBtn');
+		const mobileNav = $('#mobileNav');
 	
+		if (menuBtn.length && mobileNav.length) {
+			menuBtn.on('click', function(e) {
+				e.preventDefault();
+				mobileNav.toggleClass('show');
+				console.log('Menu button clicked');
+			});
+		}
+
+		
+	});
+
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
 		if($('.main-header').length){
@@ -30,6 +45,20 @@
 	}
 	
 	headerStyle();
+
+
+
+	// Mobile Navigation Toggle
+    // const menuBtn = $('#mobileMenuBtn');
+    // const mobileNav = $('#mobileNav');
+
+    // if (menuBtn.length && mobileNav.length) {
+    //     menuBtn.on('click', function(e) {
+    //         e.preventDefault();
+    //         mobileNav.toggleClass('show');
+    //         console.log('Menu button clicked'); // Untuk debugging
+    //     });
+    // }
 
 	
 	

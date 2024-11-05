@@ -108,9 +108,9 @@
 							<!-- <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa me. Aliquam  hendrerit urna  vitae mattis tellus ultrices.. Pellentesque sit amet sapien fringilla, mattis Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam  hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices Maecenas ligula consectetur, ultric Maecenas vitae mattis tellus.</p> -->
 							<p><?= $katalogAwal->detailProduk->deskripsi_detail_p ?></p>
 							<ul class="event-detail_list">
-								<li><i class="fa-solid fa-check fa-fw"></i><?= $katalogAwal->detailProduk->list_desk_detail_p ?></li>
-								<li><i class="fa-solid fa-check fa-fw"></i>Pembelian Minim 60 pcs</li>
-								<li><i class="fa-solid fa-check fa-fw"></i>Sesuai Custom</li>
+								<li><i class="fa-solid fa-check fa-fw"></i>Bahan : <?= $katalogAwal->detailProduk->bahan_detail_p ?></li>
+								<li><i class="fa-solid fa-check fa-fw"></i>Minim Order : <?= $katalogAwal->detailProduk->minim_detail_p ?></li>
+								<li><i class="fa-solid fa-check fa-fw"></i>Ready/Custom :<?= $katalogAwal->detailProduk->custom_detail_p ?></li>
 							</ul>
 							<!-- <p>We are a team of the dedicated patent professionals, united by our commitment toour  excellence patent protection. With years of collective experience acros diverse industries.</p> -->
 							<p><?= $katalogAwal->detailProduk->penutup_detail_p ?></p>
@@ -138,7 +138,7 @@
 										<strong>Segera Hubungi Untuk Order / Tanya</strong>
 									</div>
 									<!-- <div class="support-widget_pricing">Price start from <span>$20</span></div> -->
-									<a href="<?= $katalogAwal->detailProduk->linkwa_detail_p ?>" class="support-widget_button theme-btn">Order Sekarang<i class="flaticon-next"></i></a>
+									<a href="https://wa.me/6285731710407?text=Halo,%20mau%20order" class="support-widget_button theme-btn">Order Sekarang<i class="flaticon-next"></i></a>
 									<div class="support-widget_off">Diskusikan request di Whatsapp</div>
 								</div>
 							</div>

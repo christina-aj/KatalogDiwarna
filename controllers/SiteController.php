@@ -86,12 +86,12 @@ class SiteController extends Controller
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
-            return $this->redirect(['/admin/index']); // Redirect ke halaman admin jika sudah login
+            return $this->redirect(['/kategori/index']); // Redirect ke halaman admin jika sudah login
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['/admin/index']); // Redirect ke halaman admin setelah login berhasil
+            return $this->redirect(['/kategori/index']); // Redirect ke halaman admin setelah login berhasil
         }
 
         $model->password = '';

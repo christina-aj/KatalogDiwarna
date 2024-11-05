@@ -18,6 +18,8 @@ class FotoSlide extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+
+    public $file_foto_slide;
     public static function tableName()
     {
         return 'foto_slide';
@@ -30,6 +32,7 @@ class FotoSlide extends \yii\db\ActiveRecord
     {
         return [
             [['judul_foto_slide', 'desk_foto_slide', 'alt_foto_slide', 'url_foto_slide'], 'string', 'max' => 255],
+            [['file_foto_slide'], 'file', 'skipOnEmpty' => true, 'extensions' => 'jpg, png, jpeg, webp'],
         ];
     }
 

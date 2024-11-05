@@ -122,28 +122,46 @@ $this->beginBlock('katalog_awal_data');
 
 							<div class="header-options_box d-flex align-items-center">
 								<!--Login Btn -->
-								<!-- <div class="search-box-btn" onclick="toggleLogin()"><span class="icon fa fa-sign-in"></span></div> -->
-								<!-- <div id="loginBtn" class="search-box-btn"><span class="icon fa fa-sign-in"></span></div> -->
-								<!-- <div class="search-box-btn"><span class="icon fa fa-sign-in"></span></div> -->
 								<a href="<?= $LoginDiwarnas ?>" class="search-box-btn"><span class="icon fa fa-sign-in"></span></a>
 							</div>
 						</div>
 						<!-- End Outer Box -->
+
+						<!-- Tombol Hamburger -->
+                        <button class="navbar-toggler d-md-none" type="button" id="mobileMenuBtn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
                     </div>
                 </div>
             </div>
         </div>
 
+		<!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $HomeDiwarnas ?>">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= $AboutDiwarnas ?>">About</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="<?= $ContactDiwarnas ?>">Contact</a>
+                </li>
+            </ul>
+        </div>
+
 		<!-- Mobile Menu  -->
-		<div class="mobile-menu">
+		<!-- <div class="mobile-menu">
 			<div class="menu-backdrop"></div>
 			<div class="close-btn"><span class="icon flaticon-close-1"></span></div>
 			
 			<nav class="menu-box">
 				<div class="nav-logo"><a href="index.html"><img src="assets/images/diwarna_logo.png" alt="" title=""></a></div>
-				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+				<div class="menu-outer"></div>
 			</nav>
-		</div>
+		</div> -->
 		<!-- End Mobile Menu -->
     </header>
 
@@ -325,6 +343,7 @@ $this->beginBlock('katalog_awal_data');
 	<!-- End Main Footer -->
 
 <script src="<?= Yii::getAlias('@web') ?>/assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
 

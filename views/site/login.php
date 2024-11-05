@@ -14,9 +14,9 @@ $this->registerCssFile('@web/css/login.css');
 
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p style= "color: black;">Please fill out the following fields to login:</p>
+    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
+    <img src="/assets/images/diwarna_logo.png" alt="images">
+    <h1>Katalog Diwarna</h1>
 
     <div class="row">
         <div class="col-lg-12">
@@ -25,8 +25,8 @@ $this->registerCssFile('@web/css/login.css');
                 'id' => 'login-form',
                 'fieldConfig' => [
                     'template' => "{label}\n{input}\n{error}",
-                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3', 'style' => 'color:black'],
-                    'inputOptions' => ['class' => 'col-lg-3 form-control'],
+                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3 login-label', 'style' => 'color:black'],
+                    'inputOptions' => ['class' => 'col-lg-3 form-control login-label-input'],
                     'errorOptions' => ['class' => 'col-lg-7 invalid-feedback'],
                 ],
             ]); ?>
@@ -47,10 +47,10 @@ $this->registerCssFile('@web/css/login.css');
 
             <?php ActiveForm::end(); ?>
 
-            <div style= "color: black;">
-                You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-                To modify the username/password, please check out the code <code>app\models\User::$users</code>.
-            </div>
+            <!-- <div style= "color: black;">
+                Login dengan <strong>admin/admin</strong> untuk masuk ke CRUD.<br> -->
+                <!-- To modify the username/password, please check out the code <code>app\models\User::$users</code>. -->
+            <!-- </div> -->
 
         </div>
     </div>

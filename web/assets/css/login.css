@@ -1,16 +1,25 @@
 .site-login {
-    max-width: 400px; /* Set a maximum width for the login box */
+    max-width: 500px; /* Set a maximum width for the login box */
     margin: auto; /* Center the login box on the page */
-    padding: 20px; /* Add some padding inside the box */
+    padding: 40px; /* Add some padding inside the box */
     border: 1px solid #ccc; /* Light gray border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 15px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     background-color: #fff; /* White background */
+    margin-top: 200px;
 }
 
 .site-login h1 {
     text-align: center; /* Center the title */
     margin-bottom: 20px; /* Space below the title */
+    color: black;
+}
+
+.site-login img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     color: black;
 }
 
@@ -20,6 +29,7 @@
 
 .site-login .btn {
     width: 100%; /* Make the button full width */
+    font-size: 20px;
 }
 
 .site-login .invalid-feedback {
@@ -30,4 +40,15 @@
     margin-top: 20px; /* Space above the info text at the bottom */
     text-align: center; /* Center the info text */
     color: #999; /* Gray color for info text */
+}
+
+.login-label {
+    color: black;
+    font-size: 20px !important;
+}
+
+.login-label-input {
+    color: black;
+    font-size: 20px !important;
+    margin-bottom: 10px;
 }
