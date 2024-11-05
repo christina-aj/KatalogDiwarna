@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               8.0.30 - MySQL Community Server - GPL
+-- Server version:               10.4.32-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
 -- HeidiSQL Version:             12.1.0.6537
 -- --------------------------------------------------------
@@ -16,17 +16,18 @@
 
 
 -- Dumping database structure for katalog_diwarna
-CREATE DATABASE IF NOT EXISTS `katalog_diwarna` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `katalog_diwarna` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `katalog_diwarna`;
 
 -- Dumping structure for table katalog_diwarna.detail_produk
 CREATE TABLE IF NOT EXISTS `detail_produk` (
-  `id_detail_p` int NOT NULL AUTO_INCREMENT,
-  `katalog_awal_id` int NOT NULL,
-  `deskripsi_detail_p` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
-  `bahan_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `penutup_detail_p` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
-  `linkwa_detail_p` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '#',
+  `id_detail_p` int(11) NOT NULL AUTO_INCREMENT,
+  `katalog_awal_id` int(11) NOT NULL,
+  `deskripsi_detail_p` longtext DEFAULT NULL,
+  `bahan_detail_p` varchar(250) DEFAULT '-',
+  `minim_detail_p` varchar(250) DEFAULT '-',
+  `custom_detail_p` varchar(250) DEFAULT '-',
+  `penutup_detail_p` longtext DEFAULT NULL,
   PRIMARY KEY (`id_detail_p`) USING BTREE,
   KEY `katalog_awal_id` (`katalog_awal_id`),
   CONSTRAINT `fk-katalog_awal_id` FOREIGN KEY (`katalog_awal_id`) REFERENCES `katalog_awal` (`katalog_awal_id`)
@@ -34,26 +35,26 @@ CREATE TABLE IF NOT EXISTS `detail_produk` (
 
 -- Dumping data for table katalog_diwarna.detail_produk: ~9 rows (approximately)
 DELETE FROM `detail_produk`;
-INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `bahan_detail_p`, `penutup_detail_p`, `linkwa_detail_p`) VALUES
-	(1, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', 'https://wa.me/6285731710407?text=tess'),
-	(2, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(3, 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(4, 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(5, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(6, 6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(7, 7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(8, 8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#'),
-	(9, 9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.', '#');
+INSERT INTO `detail_produk` (`id_detail_p`, `katalog_awal_id`, `deskripsi_detail_p`, `bahan_detail_p`, `minim_detail_p`, `custom_detail_p`, `penutup_detail_p`) VALUES
+	(1, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '60 pcs', 'Custom', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(2, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(3, 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(4, 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(5, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(6, 6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(7, 7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(8, 8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.'),
+	(9, 9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet, lectus ante consequat eros, vehicula vehicula magna augue nec magna. Ut egestas rhoncus justo, at tempus quam faucibus eu. Nunc vestibulum convallis finibus. Vestibulum sed pellentesque ipsum, sed malesuada diam. ', 'Bahan Katun', '-', '-', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In metus est, placerat in quam nec, imperdiet pulvinar elit. Suspendisse et sem et leo porttitor elementum vitae eget tortor. Aliquam velit metus, lacinia id ligula ac, porta volutpat elit. Maecenas condimentum, nibh sollicitudin mattis aliquet.');
 
 -- Dumping structure for table katalog_diwarna.foto_produk
 CREATE TABLE IF NOT EXISTS `foto_produk` (
-  `id_foto_produk` int NOT NULL AUTO_INCREMENT,
-  `alt_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
-  `text_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
-  `desc_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
-  `url_foto_produk` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT '0',
+  `id_foto_produk` int(11) NOT NULL AUTO_INCREMENT,
+  `alt_foto_produk` varchar(250) DEFAULT NULL,
+  `text_foto_produk` varchar(250) DEFAULT NULL,
+  `desc_foto_produk` varchar(250) DEFAULT NULL,
+  `url_foto_produk` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id_foto_produk`)
-) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=226 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.foto_produk: ~8 rows (approximately)
 DELETE FROM `foto_produk`;
@@ -69,33 +70,33 @@ INSERT INTO `foto_produk` (`id_foto_produk`, `alt_foto_produk`, `text_foto_produ
 
 -- Dumping structure for table katalog_diwarna.foto_slide
 CREATE TABLE IF NOT EXISTS `foto_slide` (
-  `id_foto_slide` int NOT NULL AUTO_INCREMENT,
-  `judul_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `desk_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `alt_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `url_foto_slide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id_foto_slide` int(11) NOT NULL AUTO_INCREMENT,
+  `judul_foto_slide` varchar(255) DEFAULT NULL,
+  `desk_foto_slide` varchar(255) DEFAULT NULL,
+  `alt_foto_slide` varchar(255) DEFAULT NULL,
+  `url_foto_slide` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_foto_slide`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.foto_slide: ~2 rows (approximately)
 DELETE FROM `foto_slide`;
 INSERT INTO `foto_slide` (`id_foto_slide`, `judul_foto_slide`, `desk_foto_slide`, `alt_foto_slide`, `url_foto_slide`) VALUES
-	(1, 'Badge Untuk Segala Keperluan', 'Badge Bordir, Rajut, Sablon', 'Badge Bordir dll', 'assets/images/produk/slider1.png'),
-	(2, 'Kaos Kaki Segala Keperluan', 'Dengan Bahan Terpilih', 'Kaos Kaki', 'assets/images/produk/slider2.png');
+	(1, 'Badge Untuk Segala Keperluan', 'Badge Bordir, Rajut, Sablon', 'Badge Bordir dll', '/assets/images/produk/slider1.png'),
+	(2, 'Kaos Kaki Segala Keperluan', 'Dengan Bahan Terpilih', 'Kaos Kaki', '/assets/images/produk/slider2.png');
 
 -- Dumping structure for table katalog_diwarna.katalog_awal
 CREATE TABLE IF NOT EXISTS `katalog_awal` (
-  `katalog_awal_id` int NOT NULL AUTO_INCREMENT,
-  `alt_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `text_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `desc_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `url_k_awal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `id_sub_kategori` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `katalog_awal_id` int(11) NOT NULL AUTO_INCREMENT,
+  `alt_k_awal` varchar(255) DEFAULT NULL,
+  `text_k_awal` varchar(255) NOT NULL,
+  `desc_k_awal` varchar(255) DEFAULT NULL,
+  `url_k_awal` varchar(255) NOT NULL,
+  `id_sub_kategori` int(11) NOT NULL,
+  `slug` varchar(255) NOT NULL,
   PRIMARY KEY (`katalog_awal_id`),
   KEY `id_sub_kategori` (`id_sub_kategori`) USING BTREE,
   CONSTRAINT `FK-id_sub_kategori` FOREIGN KEY (`id_sub_kategori`) REFERENCES `sub_kategori` (`id_sub_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.katalog_awal: ~9 rows (approximately)
 DELETE FROM `katalog_awal`;
@@ -103,21 +104,21 @@ INSERT INTO `katalog_awal` (`katalog_awal_id`, `alt_k_awal`, `text_k_awal`, `des
 	(1, 'badge-bordir', 'Badge Bordir', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge bordir - diwarna.com.jpg', 5, 'badge-bordir'),
 	(2, 'badge-rajut', 'Badge Rajut', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge rajut - diwarna.com.jpg', 5, 'badge-rajut'),
 	(3, 'badge-sablon', 'Badge Sablon', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/badge sablon - diwarna.com.jpg', 5, 'badge-sablon'),
-	(4, 'topi-sekolah', 'Topi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/topi sekolah - diwarna.com.jpg', 1, 'topi-sekolah'),
-	(5, 'topi-promosi', 'Topi Promosi', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/topi promosi - diwarna.com.jpg', 1, 'topi-promosi'),
-	(6, 'dasi-sekolah', 'Dasi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/dasi sekolah - diwarna.com.jpg', 4, 'dasi-sekolah'),
-	(7, 'sabuk-sekolah', 'Sabuk Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/sabuk sekolah - diwarna.com.jpg', 3, 'sabuk-sekolah'),
-	(8, 'evolet-sekolah', 'Evolet Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/thumbs/evolet sekolah - diwarna.com.jpg', 19, 'evolet-sekolah'),
-	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets//images/thumbs/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
+	(4, 'topi-sekolah', 'Topi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/topi sekolah - diwarna.com.jpg', 1, 'topi-sekolah'),
+	(5, 'topi-promosi', 'Topi Promosi', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/topi promosi - diwarna.com.jpg', 1, 'topi-promosi'),
+	(6, 'dasi-sekolah', 'Dasi Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/dasi sekolah - diwarna.com.jpg', 4, 'dasi-sekolah'),
+	(7, 'sabuk-sekolah', 'Sabuk Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/sabuk sekolah - diwarna.com.jpg', 3, 'sabuk-sekolah'),
+	(8, 'evolet-sekolah', 'Evolet Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/evolet sekolah - diwarna.com.jpg', 19, 'evolet-sekolah'),
+	(9, 'kaos-kaki-sekolah', 'Kaos Kaki Sekolah', 'Murah, Bahan Berkualitas. Disesuaikan Dengan Keinginan Anda.', '/assets/images/katalog/kaos kaki sekolah - diwarna.com.jpg', 18, 'kaos-kaki-sekolah');
 
 -- Dumping structure for table katalog_diwarna.kategori
 CREATE TABLE IF NOT EXISTS `kategori` (
-  `id_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0 tdk tampil, 1 tampil',
+  `id_kategori` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_kategori` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0 tdk tampil, 1 tampil',
   PRIMARY KEY (`id_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.kategori: ~5 rows (approximately)
 DELETE FROM `kategori`;
@@ -130,14 +131,14 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug`, `status`) VALUES
 
 -- Dumping structure for table katalog_diwarna.sub_kategori
 CREATE TABLE IF NOT EXISTS `sub_kategori` (
-  `id_sub_kategori` int NOT NULL AUTO_INCREMENT,
-  `nama_sub_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `id_kategori` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `id_sub_kategori` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_sub_kategori` varchar(255) NOT NULL,
+  `id_kategori` int(11) NOT NULL,
+  `slug` varchar(255) NOT NULL,
   PRIMARY KEY (`id_sub_kategori`),
   KEY `id_kategori` (`id_kategori`) USING BTREE,
   CONSTRAINT `FK-id_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table katalog_diwarna.sub_kategori: ~19 rows (approximately)
 DELETE FROM `sub_kategori`;
@@ -160,14 +161,15 @@ INSERT INTO `sub_kategori` (`id_sub_kategori`, `nama_sub_kategori`, `id_kategori
 	(16, 'Banner', 5, 'banner'),
 	(17, 'Foto', 5, 'foto'),
 	(18, 'Kaos Kaki', 1, 'kaos-kaki'),
-	(19, 'Evolet Pundak', 2, 'evolet-pundak');
+	(19, 'Evolet Pundak', 2, 'evolet-pundak'),
+	(20, 'meja', 2, 'mj');
 
 -- Dumping structure for table katalog_diwarna.testimonial
 CREATE TABLE IF NOT EXISTS `testimonial` (
-  `id_testi` int NOT NULL AUTO_INCREMENT,
-  `nama_testi` varchar(255) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
-  `note_testi` varchar(255) COLLATE armscii8_bin NOT NULL,
-  `desc_testi` longtext CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  `id_testi` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_testi` varchar(255) NOT NULL,
+  `note_testi` varchar(255) NOT NULL,
+  `desc_testi` longtext NOT NULL,
   PRIMARY KEY (`id_testi`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
