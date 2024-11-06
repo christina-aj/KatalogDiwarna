@@ -43,10 +43,10 @@ class FotoProduk extends \yii\db\ActiveRecord
     {
         return [
             'id_foto_produk' => 'Id Foto Produk',
-            'alt_foto_produk' => 'Alt Foto Produk',
-            'text_foto_produk' => 'Text Foto Produk',
-            'desc_foto_produk' => 'Desc Foto Produk',
-            'url_foto_produk' => 'Url Foto Produk',
+            'alt_foto_produk' => 'Alt Foto',
+            'text_foto_produk' => 'Judul Foto',
+            'desc_foto_produk' => 'Deskripsi',
+            'url_foto_produk' => 'Foto Produk',
         ];
     }
 }

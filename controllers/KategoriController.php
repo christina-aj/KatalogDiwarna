@@ -139,4 +139,9 @@ class KategoriController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    public function actionPanduan()
+    {
+        return $this->render('panduan');
+    }
 }

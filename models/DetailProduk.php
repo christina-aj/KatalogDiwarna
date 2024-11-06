@@ -49,11 +49,11 @@ class DetailProduk extends \yii\db\ActiveRecord
         return [
             'id_detail_p' => 'Id Detail P',
             'katalog_awal_id' => 'Katalog Awal ID',
-            'deskripsi_detail_p' => 'Deskripsi Detail P',
-            'bahan_detail_p' => 'Bahan Detail P',
-            'minim_detail_p' => 'Minim Detail P',
-            'custom_detail_p' => 'Custom Detail P',
-            'penutup_detail_p' => 'Penutup Detail P',
+            'deskripsi_detail_p' => 'Deskripsi Awal',
+            'bahan_detail_p' => 'Bahan Produk',
+            'minim_detail_p' => 'Minim Order',
+            'custom_detail_p' => 'Custom/Ready',
+            'penutup_detail_p' => 'Deskripsi Akhir',
         ];
     }
 

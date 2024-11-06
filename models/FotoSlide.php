@@ -43,10 +43,10 @@ class FotoSlide extends \yii\db\ActiveRecord
     {
         return [
             'id_foto_slide' => 'Id Foto Slide',
-            'judul_foto_slide' => 'Judul Foto Slide',
-            'desk_foto_slide' => 'Desk Foto Slide',
-            'alt_foto_slide' => 'Alt Foto Slide',
-            'url_foto_slide' => 'Url Foto Slide',
+            'judul_foto_slide' => 'Judul Foto',
+            'desk_foto_slide' => 'Deskripsi Foto',
+            'alt_foto_slide' => 'Alt Foto',
+            'url_foto_slide' => 'Foto Slide',
         ];
     }
 }

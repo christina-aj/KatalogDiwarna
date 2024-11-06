@@ -3,7 +3,7 @@
 /* FORM CREATE UPDATE CRUD*/
 
 .create-form {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -78,7 +78,10 @@
 
 /* VIEW INDEX CRUD*/
 .pc-content {
-    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
     max-width: 100%;
 }
 
@@ -1005,7 +1008,7 @@
 @media only screen and (max-width: 479px) {
 	
 	h1 {
-		line-height: 40px;
+		line-height: 50px;
 		font-size: 30px;
 	}
 	

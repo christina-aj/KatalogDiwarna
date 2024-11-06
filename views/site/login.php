@@ -16,7 +16,7 @@ $this->registerCssFile('@web/css/login.css');
 <div class="site-login">
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
     <img src="/assets/images/diwarna_logo.png" alt="images">
-    <h1>Katalog Diwarna</h1>
+    <h1>Login Admin <br> Katalog Diwarna</h1>
 
     <div class="row">
         <div class="col-lg-12">

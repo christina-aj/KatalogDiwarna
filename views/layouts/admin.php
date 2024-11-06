@@ -17,6 +17,7 @@ $DetailProduk= Url::to(['detail-produk/index']);
 $FotoProduk= Url::to(['foto-produk/index']);
 $FotoSlide= Url::to(['foto-slide/index']);
 $Testimonial= Url::to(['testimonial/index']);
+$Panduan = Url::to(['kategori/panduan']);
 
 $this->beginBlock('katalog_awal_data');
 $katalog_awal = KatalogAwal::find()
@@ -112,6 +113,7 @@ $katalog_awal = KatalogAwal::find()
                                         <li><a href="<?= $FotoProduk ?>">Foto Produk</a></li>
                                         <li><a href="<?= $FotoSlide ?>">Foto Slide</a></li>
                                         <li><a href="<?= $Testimonial ?>">Info Testimonial</a></li>
+                                        <li><a href="<?= $Panduan ?>">Panduan</a></li>
                                     </ul>
                                 </div>
                             </nav>

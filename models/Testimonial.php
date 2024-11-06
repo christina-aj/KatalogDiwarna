@@ -41,9 +41,9 @@ class Testimonial extends \yii\db\ActiveRecord
     {
         return [
             'id_testi' => 'Id Testi',
-            'nama_testi' => 'Nama Testi',
-            'note_testi' => 'Note Testi',
-            'desc_testi' => 'Desk Testi',
+            'nama_testi' => 'Nama Customer',
+            'note_testi' => 'Note Customer',
+            'desc_testi' => 'Deskripsi Testi',
         ];
     }
 }
